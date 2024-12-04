@@ -2,10 +2,10 @@ class App {
     constructor() {
         // Game state variables
         this.words = [
-            { word: "java", hint: "A popular programming language" },
-            { word: "python", hint: "A snake or a programming language" },
-            { word: "ruby", hint: "A gem and a language" },
-            { word: "swift", hint: "Apple's programming language" },
+            { word: "sus", hint: "Short for 'suspicious,'" },
+            { word: "delulu", hint: "Delusional or having unrealistic beliefs or expectations" },
+            { word: "bussin", hint: "It's very good." },
+            { word: "goat", hint: "Greatest of All Time" },
         ];
         this.selectedWord = "";
         this.hint = "";
@@ -41,7 +41,7 @@ class App {
         const randomIndex = Math.floor(Math.random() * this.words.length);
         const randomWordObj = this.words[randomIndex];
         this.selectedWord = randomWordObj.word;
-        this.guessLength = 10;
+        this.guessLength = 3;
         this.hint = randomWordObj.hint;
         this.remainingGuesses = this.guessLength;
         this.guessedLetters = [];
