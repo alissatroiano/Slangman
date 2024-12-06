@@ -1,5 +1,27 @@
 class App {
     constructor() {
+        const output = document.querySelector('#messageOutput');
+        const usernameLabel = document.querySelector('#username');
+
+          // When the Devvit app sends a message with `context.ui.webView.postMessage`, this will be triggered
+        window.addEventListener('message', (ev) => {
+            const { type, data } = ev.data;
+    
+            // Reserved type for messages sent via `context.ui.webView.postMessage`
+            if (type === 'devvit-message') {
+            const { message } = data;
+    
+            // Always output full message
+            output.replaceChildren(JSON.stringify(message, undefined, 2));
+    
+            // Load initial data
+            if (message.type === 'initialData') {
+                const { username } = message.data;
+                usernameLabel.innerText = username;
+            }
+    
+            }
+        });
         // Game state variables
         this.words = [
             { word: "sus", hint: "Short for 'suspicious,'" },
@@ -41,7 +63,7 @@ class App {
         const randomIndex = Math.floor(Math.random() * this.words.length);
         const randomWordObj = this.words[randomIndex];
         this.selectedWord = randomWordObj.word;
-        this.guessLength = 3;
+        this.guessLength = 5;
         this.hint = randomWordObj.hint;
         this.remainingGuesses = this.guessLength;
         this.guessedLetters = [];

@@ -37,18 +37,7 @@ Devvit.addCustomPostType({
     // When the web view invokes `window.parent.postMessage` this function is called
     const onMessage = async (msg: WebViewMessage) => {
       switch (msg.type) {
-        case 'setCounter':
-          await context.redis.set(`counter_${context.postId}`, msg.data.newCounter.toString());
-          context.ui.webView.postMessage('myWebView', {
-            type: 'updateCounter',
-            data: {
-              currentCounter: msg.data.newCounter,
-            },
-          });
-          setCounter(msg.data.newCounter);
-          break;
         case 'initialData':
-        case 'updateCounter':
           break;
 
         default:
@@ -77,7 +66,7 @@ Devvit.addCustomPostType({
           alignment="middle center"
         >
           <text size="xlarge" weight="bold">
-            Example App
+            slangman
           </text>
           <spacer />
           <vstack alignment="start middle">
@@ -88,13 +77,7 @@ Devvit.addCustomPostType({
                 {username ?? ''}
               </text>
             </hstack>
-            <hstack>
-              <text size="medium">Current counter:</text>
-              <text size="medium" weight="bold">
-                {' '}
-                {counter ?? ''}
-              </text>
-            </hstack>
+           
           </vstack>
           <spacer />
           <button onPress={onShowWebviewClick}>Launch App</button>
