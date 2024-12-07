@@ -51,6 +51,38 @@ span.text-special {
   font-size: 1.2rem;
 }
 
+/* ------------- Slangman */
+#gamePage {
+  background: var(--darkest);
+}
+
+.title {
+  font-family: "fractul-variable", sans-serif;
+  font-variation-settings: "wght" 400;
+  text-transform: lowercase;
+  color: var(--primary-color);
+  margin-top: 20px;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+/* 
+.message {
+  background: transparent;
+} */
+
+#wordLabel {
+  margin-top: 20px;
+  border: none;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: transparent;
+}
+
 .subtitle {
   color: var(--secondary-color);
 }
@@ -60,14 +92,11 @@ p#displayWord {
   letter-spacing: 5px;
 }
 
-input {
-  margin-bottom: 20px;
-}
-
 input[type=text] {
   color: #7760fa;
   background-color: transparent;
   border: 1px solid var(--primary-color);
+  margin-top: 20px;
 }
 
 h1,
@@ -97,23 +126,6 @@ h3 {
 #counter {
   color: var(--primary-color);
   font-weight: 600;
-}
-
-/* ------------- Slangman */
-#gamePage {
-  background: var(--darkest);
-}
-
-.title {
-  font-family: "fractul-variable", sans-serif;
-  font-variation-settings: "wght" 400;
-  text-transform: lowercase;
-  color: var(--primary-color);
-  margin-top: 20px;
-}
-
-.wrapper {
-  overflow: hidden;
 }
 
 .content {

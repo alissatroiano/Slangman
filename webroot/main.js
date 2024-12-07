@@ -2,32 +2,19 @@ class App {
     constructor() {
         const output = document.querySelector('#messageOutput');
         const usernameLabel = document.querySelector('#username');
+        const wordLabel = document.querySelector('#wordLabel');
 
-          // When the Devvit app sends a message with `context.ui.webView.postMessage`, this will be triggered
-        window.addEventListener('message', (ev) => {
-            const { type, data } = ev.data;
-    
-            // Reserved type for messages sent via `context.ui.webView.postMessage`
-            if (type === 'devvit-message') {
-            const { message } = data;
-    
-            // Always output full message
-            output.replaceChildren(JSON.stringify(message, undefined, 2));
-    
-            // Load initial data
-            if (message.type === 'initialData') {
-                const { username } = message.data;
-                usernameLabel.innerText = username;
-            }
-    
-            }
-        });
         // Game state variables
         this.words = [
             { word: "sus", hint: "Short for 'suspicious,'" },
             { word: "delulu", hint: "Delusional or having unrealistic beliefs or expectations" },
             { word: "bussin", hint: "It's very good." },
             { word: "goat", hint: "Greatest of All Time" },
+            { word: "dude", hint: "A versatile term used to address a person, often a friend or acquaintance. It's commonly associated with surfer culture but has become a mainstream slang term" },
+            { word: "savage", hint: "Used to describe someone or something as fearless, bold, or ruthless. It's often used humorously or ironically to praise someone's audacity or wit" },
+            { word: "fomo", hint: "acronym for 'fear of missing out,' referring to the anxiety or apprehension one feels when they think others are having enjoyable experiences without them" },
+            { word: "malarkey", hint: "Nonsense or foolish talk" },
+            { word: "ratchet", hint: "Low-class or trashy" }
         ];
         this.selectedWord = "";
         this.hint = "";
@@ -47,9 +34,42 @@ class App {
         // Bind event listeners
         this.letterInput.addEventListener("input", this.handleGuess.bind(this));
         this.resetButton.addEventListener("click", this.resetGame.bind(this));
-        
+
         // Start the game
         this.startNewGame(); // Call startNewGame instead of resetGame here
+
+        window.addEventListener('message', (ev) => {
+            const { type, data } = ev.data;
+
+            // Reserved type for messages sent via `context.ui.webView.postMessage`
+            if (type === 'devvit-message') {
+                const { message } = data;
+
+                // Always output full message
+                output.replaceChildren(JSON.stringify(message, undefined, 2));
+
+                // Handle different message types
+                switch (message.type) {
+                    case 'initialData':
+                        const { username } = message.data;
+                        usernameLabel.innerText = username;
+                        break;
+
+                    case 'gameOver':
+                        const { gameOverMsg } = message.data;
+                        wordLabel.innerText = gameOverMsg;
+                        break;
+
+                    case 'gameWin':
+                        const { gameWinMsg } = message.data;
+                        wordLabel.innerHTML = gameWinMsg;
+                        break;
+
+                    default:
+                        console.error(`Unknown message type: ${message.type}`);
+                }
+            }
+        });
     }
 
     // Method to start a new game
@@ -91,20 +111,37 @@ class App {
 
         // Check game status
         if (this.remainingGuesses <= 0) {
-            alert("Game Over! The word was: " + this.selectedWord);
+            // Send 'Game Over' message
+            window.parent?.postMessage(
+                {
+                    type: 'gameOver',
+                    data: { gameOverMsg: `Game Over! The word was: ${this.selectedWord}` },
+                },
+                '*'
+            );
             this.resetGame();
             return;
         }
 
         if (this.getDisplayWord() === this.selectedWord) {
-            alert("Congratulations! You guessed the word: " + this.selectedWord);
+            // Send 'Congratulations' message
+            window.parent?.postMessage(
+                {
+                    type: 'gameWin',
+                    data: { gameWinMsg: `Congratulations! You guessed the word: ${this.selectedWord}` },
+                },
+                '*'
+            );
             this.resetGame();
             return;
         }
 
         // Update the display
         this.updateDisplay();
+        console.log(ev.data);
+
     }
+
 
     // Method to generate the display word with underscores
     getDisplayWord() {
@@ -121,6 +158,7 @@ class App {
         this.remainingGuessesElement.textContent = this.remainingGuesses;
         this.wrongLettersElement.textContent = this.wrongLetters.join(", ");
     }
+
 }
 
 new App();

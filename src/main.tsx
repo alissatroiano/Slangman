@@ -1,13 +1,20 @@
 import './createPost.js';
-
 import { Devvit, useState } from '@devvit/public-api';
 
 // Defines the messages that are exchanged between Devvit and Web View
 type WebViewMessage =
   | {
-      type: 'initialData';
-      data: { username: string };
-    };
+    type: 'initialData';
+    data: { username: string };
+  }
+  | {
+    type: 'gameOver';
+    data: { message: string };
+  }
+  | {
+    type: 'gameWin';
+    data: { message: string };
+  };
 
 Devvit.configure({
   redditAPI: true,
@@ -25,11 +32,6 @@ Devvit.addCustomPostType({
       return currUser?.username ?? 'anon';
     });
 
-    // Load latest counter from redis with `useAsync` hook
-    const [counter, setCounter] = useState(async () => {
-      const redisCount = await context.redis.get(`counter_${context.postId}`);
-      return Number(redisCount ?? 0);
-    });
 
     // Create a reactive state for web view visibility
     const [webviewVisible, setWebviewVisible] = useState(false);
@@ -38,6 +40,21 @@ Devvit.addCustomPostType({
     const onMessage = async (msg: WebViewMessage) => {
       switch (msg.type) {
         case 'initialData':
+          // Handle initial data
+          break;
+
+        case 'gameOver':
+          context.ui.showToast({
+            type: 'error',
+            message: msg.data.message,
+          });
+          break;
+
+        case 'gameWin':
+          context.ui.showToast({
+            type: 'success',
+            message: msg.data.message,
+          });
           break;
 
         default:
@@ -51,8 +68,7 @@ Devvit.addCustomPostType({
       context.ui.webView.postMessage('myWebView', {
         type: 'initialData',
         data: {
-          username: username,
-          currentCounter: counter,
+          username: username
         },
       });
     };
@@ -77,13 +93,13 @@ Devvit.addCustomPostType({
                 {username ?? ''}
               </text>
             </hstack>
-           
+
           </vstack>
           <spacer />
           <button onPress={onShowWebviewClick}>Launch App</button>
         </vstack>
         <vstack grow={webviewVisible} height={webviewVisible ? '100%' : '0%'}>
-          <vstack border="thick" borderColor="black" height={webviewVisible ? '100%' : '0%'}>
+          <vstack height={webviewVisible ? '100%' : '0%'}>
             <webview
               id="myWebView"
               url="index.html"
