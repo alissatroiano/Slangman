@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.typekit.net/gqi4iah.css">
     <title>slangman</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -14,29 +14,29 @@
 <body id="gamePage">
     <section class="game container-fluid">
         <div class="row my-3">
-            <div class="col-12 mt-3 mt-sm-4">
-        <h1 class="title text-start display-4">Welcome to <span class="text-special">Slangman</span></h1>
-        <!-- <h3 class="font-primary my-3">Your username is <span id="username"></span></h3> -->
-    </div>
+            <div class="col-12">
+                <h1 class="title text-start display-4">Welcome to <span class="text-special">Slangman</span></h1>
+                <!-- <h3 class="font-primary my-3">Your username is <span id="username"></span></h3> -->
+            </div>
         </div>
         <div class="row wrapper font-primary" id="gameWrapper">
             <div class="col-12">
-        <h2 class="subtitle my-3 display-6">Guess the Word</h2>
-        </div>
-        <div class="col-12">
-        <div class="content font-primarys">
-            <input type="text" class="typing-input" id="letter-input" maxlength="1" />
-            <p id="displayWord"></p>
-            <div class="details display-7">
-                <p class="hint">Hint: <span id="hint"></span></p>
-                <p class="guess-left">Remaining guesses: <span id="remaining-guesses"></span></p>
-                <p class="wrong-letter">Wrong letters: <span id="wrong-letters"></span></p>
+                <h2 class="subtitle my-3 display-6">Guess the Word</h2>
             </div>
-            <button id="reset-btn">Reset Game</button>
+            <div class="col-12">
+                <div class="content font-primarys">
+                    <input type="text" class="typing-input" id="letter-input" maxlength="1" />
+                    <p id="displayWord"></p>
+                    <div class="details display-7">
+                        <p class="hint">Hint: <span id="hint"></span></p>
+                        <p class="guess-left">Remaining guesses: <span id="remaining-guesses"></span></p>
+                        <p class="wrong-letter">Wrong letters: <span id="wrong-letters"></span></p>
+                    </div>
+                    <button id="reset-btn">New Word</button>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
-</section>
+    </section>
     <script type="application/javascript" src="main.js"></script>
     <!--load bootstrap scripts-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

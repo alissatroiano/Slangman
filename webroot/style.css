@@ -39,13 +39,6 @@ body {
   font-variation-settings: "wght" 400;  
 }
 
-.title {
-  font-family: "fractul-variable", sans-serif;
-  font-variation-settings: "wght" 400;
-  text-transform: lowercase;
-  color: var(--primary-color);
-}
-
 span.text-special {
   font-family: "fractul-variable", sans-serif;
   font-variation-settings: "wght" 800;
@@ -60,6 +53,21 @@ span.text-special {
 
 .subtitle {
   color: var(--secondary-color);
+}
+
+p#displayWord {
+  font-size: 1.85rem;
+  letter-spacing: 5px;
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+input[type=text] {
+  color: #7760fa;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
 }
 
 h1,
@@ -96,6 +104,14 @@ h3 {
   background: var(--darkest);
 }
 
+.title {
+  font-family: "fractul-variable", sans-serif;
+  font-variation-settings: "wght" 400;
+  text-transform: lowercase;
+  color: var(--primary-color);
+  margin-top: 20px;
+}
+
 .wrapper {
   overflow: hidden;
 }
@@ -116,6 +132,13 @@ p#progressMsg {
   color: var(--accent-color);
 }
 
+button#reset-btn {
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-transform: lowercase;
+}
 /* New button container */
 .button-container {
   display: flex;
