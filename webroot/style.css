@@ -73,7 +73,7 @@ span.text-special {
   background: transparent;
 } */
 
-#wordLabel {
+p#messageOutput {
   margin-top: 20px;
   border: none;
   color: var(--secondary-color);

@@ -46,7 +46,9 @@ Devvit.addCustomPostType({
         case 'gameOver':
           context.ui.showToast({
             type: 'error',
-            message: msg.data.message,
+            data: {
+              message: msg.data.message,
+            }
           });
           break;
 
@@ -68,7 +70,7 @@ Devvit.addCustomPostType({
       context.ui.webView.postMessage('myWebView', {
         type: 'initialData',
         data: {
-          username: username
+          username: username,
         },
       });
     };

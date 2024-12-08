@@ -2,7 +2,6 @@ class App {
     constructor() {
         const output = document.querySelector('#messageOutput');
         const usernameLabel = document.querySelector('#username');
-        const wordLabel = document.querySelector('#wordLabel');
 
         // Game state variables
         this.words = [
@@ -56,13 +55,11 @@ class App {
                         break;
 
                     case 'gameOver':
-                        const { gameOverMsg } = message.data;
-                        wordLabel.innerText = gameOverMsg;
+                        message.innerText = `Error: ${message.data.message}`;
                         break;
 
                     case 'gameWin':
-                        const { gameWinMsg } = message.data;
-                        wordLabel.innerHTML = gameWinMsg;
+                        message.innerText = `Success: ${message.data.message}`;
                         break;
 
                     default:
@@ -115,7 +112,7 @@ class App {
             window.parent?.postMessage(
                 {
                     type: 'gameOver',
-                    data: { gameOverMsg: `Game Over! The word was: ${this.selectedWord}` },
+                    data: { message: `Game Over! The word was: ${this.selectedWord}` },
                 },
                 '*'
             );
@@ -128,7 +125,7 @@ class App {
             window.parent?.postMessage(
                 {
                     type: 'gameWin',
-                    data: { gameWinMsg: `Congratulations! You guessed the word: ${this.selectedWord}` },
+                    data: { message: `Congratulations! You guessed the word: ${this.selectedWord}` },
                 },
                 '*'
             );
