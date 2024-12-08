@@ -68,19 +68,20 @@ span.text-special {
   overflow: hidden;
 }
 
-/* 
+
 .message {
   background: transparent;
-} */
+}
 
-p#messageOutput {
+#messageOutput,
+#gameMsg {
   margin-top: 20px;
   border: none;
   color: var(--secondary-color);
   font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-color: transparent;
+  background: transparent;
 }
 
 .subtitle {

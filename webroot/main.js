@@ -2,6 +2,7 @@ class App {
     constructor() {
         const output = document.querySelector('#messageOutput');
         const usernameLabel = document.querySelector('#username');
+        const gameMsg = document.querySelector('#gameMsg');
 
         // Game state variables
         this.words = [
@@ -30,6 +31,7 @@ class App {
         this.wrongLettersElement = document.getElementById("wrong-letters");
         this.resetButton = document.getElementById("reset-btn");
         this.progressMsg = document.getElementById("progressMsg");
+
         // Bind event listeners
         this.letterInput.addEventListener("input", this.handleGuess.bind(this));
         this.resetButton.addEventListener("click", this.resetGame.bind(this));
@@ -69,7 +71,6 @@ class App {
         });
     }
 
-    // Method to start a new game
     startNewGame() {
         console.log("Starting a new game...");
         this.resetGame(); // Use resetGame logic to start a fresh game
@@ -90,11 +91,11 @@ class App {
 
     // Method to handle user guesses
     handleGuess() {
-        const guess = this.letterInput.value.toLowerCase();
+        let guess = this.letterInput.value.toLowerCase(); // Convert to lowercase
         this.letterInput.value = ""; // Clear input field
 
-        // Ignore invalid input or already guessed letters
-        if (!guess || this.guessedLetters.includes(guess) || this.wrongLetters.includes(guess)) {
+        // Ignore if guess is not a single letter or already guessed
+        if (!/^[a-z]$/.test(guess) || this.guessedLetters.includes(guess) || this.wrongLetters.includes(guess)) {
             return;
         }
 
@@ -121,7 +122,6 @@ class App {
         }
 
         if (this.getDisplayWord() === this.selectedWord) {
-            // Send 'Congratulations' message
             window.parent?.postMessage(
                 {
                     type: 'gameWin',
@@ -135,10 +135,7 @@ class App {
 
         // Update the display
         this.updateDisplay();
-        console.log(ev.data);
-
     }
-
 
     // Method to generate the display word with underscores
     getDisplayWord() {

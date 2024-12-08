@@ -46,9 +46,7 @@ Devvit.addCustomPostType({
         case 'gameOver':
           context.ui.showToast({
             type: 'error',
-            data: {
-              message: msg.data.message,
-            }
+            message: msg.data.message,
           });
           break;
 
