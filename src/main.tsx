@@ -32,7 +32,6 @@ Devvit.addCustomPostType({
       return currUser?.username ?? 'anon';
     });
 
-
     // Create a reactive state for web view visibility
     const [webviewVisible, setWebviewVisible] = useState(false);
 

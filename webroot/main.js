@@ -2,7 +2,7 @@ class App {
     constructor() {
         const output = document.querySelector('#messageOutput');
         const usernameLabel = document.querySelector('#username');
-        const gameMsg = document.querySelector('#gameMsg');
+        // const message = document.querySelector('#gameMsg');
 
         // Game state variables
         this.words = [
@@ -31,6 +31,7 @@ class App {
         this.wrongLettersElement = document.getElementById("wrong-letters");
         this.resetButton = document.getElementById("reset-btn");
         this.progressMsg = document.getElementById("progressMsg");
+        this.message = document.getElementById("gameMsg");
 
         // Bind event listeners
         this.letterInput.addEventListener("input", this.handleGuess.bind(this));
@@ -152,7 +153,6 @@ class App {
         this.remainingGuessesElement.textContent = this.remainingGuesses;
         this.wrongLettersElement.textContent = this.wrongLetters.join(", ");
     }
-
 }
 
 new App();
