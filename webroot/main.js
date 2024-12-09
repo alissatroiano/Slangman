@@ -2,6 +2,7 @@ class App {
     constructor() {
         const output = document.querySelector('#messageOutput');
         const usernameLabel = document.querySelector('#username');
+        const gameWrapper = document.querySelector('#slangmanWrapper');
         // const message = document.querySelector('#gameMsg');
 
         // Game state variables
@@ -110,26 +111,27 @@ class App {
 
         // Check game status
         if (this.remainingGuesses <= 0) {
-            // Send 'Game Over' message
-            window.parent?.postMessage(
-                {
-                    type: 'gameOver',
-                    data: { message: `Game Over! The word was: ${this.selectedWord}` },
-                },
-                '*'
-            );
+            gameMsg.innerHTML = `Game Over! The word was: <strong>${this.selectedWord} </strong>`;
+            // window.parent?.showToast(
+            //     {
+            //         type: 'gameOver',
+            //         data: { message: `Game Over! The word was: ${this.selectedWord}` },
+            //     },
+            //     '*'
+            // );
             this.resetGame();
             return;
         }
 
         if (this.getDisplayWord() === this.selectedWord) {
-            window.parent?.postMessage(
-                {
-                    type: 'gameWin',
-                    data: { message: `Congratulations! You guessed the word: ${this.selectedWord}` },
-                },
-                '*'
-            );
+            gameMsg.innerHTML = `Congratulations! You guessed the right word: <strong> ${this.selectedWord} </strong>`;
+            // window.parent?.showToast(
+            //     {
+            //         type: 'gameWin',
+            //         data: { message: `Congratulations! You guessed the word: ${this.selectedWord}` },
+            //     },
+            //     '*'
+            // );
             this.resetGame();
             return;
         }

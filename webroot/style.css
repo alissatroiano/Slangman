@@ -71,17 +71,24 @@ span.text-special {
 
 .message {
   background: transparent;
+  margin-top: 15px;
 }
 
 #messageOutput,
 #gameMsg {
   margin-top: 20px;
   border: none;
-  color: var(--secondary-color);
+  color: var(--link-color);
   font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   background: transparent;
+}
+
+strong 
+{
+  color: var(--secondary-color);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .subtitle {

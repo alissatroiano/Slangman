@@ -12,18 +12,18 @@
 </head>
 
 <body id="gamePage">
-    <section class="game container-fluid">
+    <section class="game container-fluid" id="slangmanWrapper">
         <div class="row my-3">
             <div class="col-12">
                 <h1 class="title text-start display-4">Welcome to <span class="text-special">Slangman</span></h1>
                 <!-- <h3 class="font-primary my-3">Your username is <span id="username"></span></h3> -->
             </div>
         </div>
-        <div class="row wrapper font-primary" id="gameWrapper">
+        <div class="row wrapper font-primary">
             <div class="col-12">
                 <h2 class="subtitle my-3 display-6">Guess the Word</h2>
             </div>
-            <div class="col-12">
+            <div class="col-12"  id="gameWrapper">
                 <div class="content font-primarys">
                     <input type="text" class="typing-input" id="letter-input" maxlength="1" />
                     <p id="displayWord"></p>
@@ -35,9 +35,9 @@
                     <button id="reset-btn">New Word</button>
                 </div>
             </div>
-            <div class="message" id="progressMsg">
-                <pre id="gameMsg"></pre>
-            </div>
+        </div>
+        <div class="message font-primary" id="progressMsg">
+            <span id="gameMsg"></span>
         </div>
     </section>
     <script type="application/javascript" src="main.js"></script>
