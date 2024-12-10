@@ -3,7 +3,7 @@ class App {
         const output = document.querySelector('#messageOutput');
         const usernameLabel = document.querySelector('#username');
         const gameWrapper = document.querySelector('#slangmanWrapper');
-        // let message = document.querySelector('#gameMsg');
+        // const message = document.querySelector('#gameMsg');
 
         // Game state variables
         this.words = [
@@ -33,7 +33,15 @@ class App {
         this.resetButton = document.getElementById("reset-btn");
         this.progressMsg = document.getElementById("progressMsg");
         this.message = document.getElementById("gameMsg");
-
+        this.hangmanParts = [
+            document.getElementById("head"),
+            document.getElementById("body"),
+            document.getElementById("right-arm"),
+            document.getElementById("left-arm"),
+            document.getElementById("right-leg"),
+            document.getElementById("left-leg"),
+          ];
+          
         // Bind event listeners
         this.letterInput.addEventListener("input", this.handleGuess.bind(this));
         this.resetButton.addEventListener("click", this.resetGame.bind(this));
@@ -83,7 +91,7 @@ class App {
         const randomIndex = Math.floor(Math.random() * this.words.length);
         const randomWordObj = this.words[randomIndex];
         this.selectedWord = randomWordObj.word;
-        this.guessLength = 5;
+        this.guessLength = randomWordObj.length;
         this.hint = randomWordObj.hint;
         this.remainingGuesses = this.guessLength;
         this.guessedLetters = [];
@@ -107,6 +115,10 @@ class App {
         } else {
             this.wrongLetters.push(guess);
             this.remainingGuesses--;
+
+            if (this.wrongLetters.length <= this.hangmanParts.length) {
+                this.hangmanParts[this.wrongLetters.length - 1].style.display = "flex";
+              }
         }
 
         // Check game status
