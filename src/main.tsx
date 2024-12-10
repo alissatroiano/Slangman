@@ -6,14 +6,6 @@ type WebViewMessage =
   | {
     type: 'initialData';
     data: { username: string };
-  }
-  | {
-    type: 'gameOver';
-    data: { message: string };
-  }
-  | {
-    type: 'gameWin';
-    data: { message: string };
   };
 
 Devvit.configure({
@@ -23,7 +15,7 @@ Devvit.configure({
 
 // Add a custom post type to Devvit
 Devvit.addCustomPostType({
-  name: 'Webview Example',
+  name: 'Slangman',
   height: 'tall',
   render: (context) => {
     // Load username with `useAsync` hook
@@ -32,6 +24,12 @@ Devvit.addCustomPostType({
       return currUser?.username ?? 'anon';
     });
 
+    // Load latest counter from redis with `useAsync` hook
+    // const [counter, setCounter] = useState(async () => {
+    //   const redisCount = await context.redis.get(`counter_${context.postId}`);
+    //   return Number(redisCount ?? 0);
+    // });
+
     // Create a reactive state for web view visibility
     const [webviewVisible, setWebviewVisible] = useState(false);
 
@@ -39,21 +37,6 @@ Devvit.addCustomPostType({
     const onMessage = async (msg: WebViewMessage) => {
       switch (msg.type) {
         case 'initialData':
-          // Handle initial data
-          break;
-
-        case 'gameOver':
-          context.ui.showToast({
-            type: 'error',
-            message: msg.data.message,
-          });
-          break;
-
-        case 'gameWin':
-          context.ui.showToast({
-            type: 'success',
-            message: msg.data.message,
-          });
           break;
 
         default:
@@ -80,11 +63,16 @@ Devvit.addCustomPostType({
           height={webviewVisible ? '0%' : '100%'}
           alignment="middle center"
         >
-          <text size="xlarge" weight="bold">
-            slangman
-          </text>
+          <image
+            url="slangman_logo_1.png"
+            description="logo"
+            imageHeight={256}
+            imageWidth={256}
+            height="300px"
+            width="300px"
+          />
           <spacer />
-          <vstack alignment="start middle">
+          {/* <vstack alignment="start middle">
             <hstack>
               <text size="medium">Username:</text>
               <text size="medium" weight="bold">
@@ -92,13 +80,12 @@ Devvit.addCustomPostType({
                 {username ?? ''}
               </text>
             </hstack>
-
-          </vstack>
+          </vstack> */}
           <spacer />
-          <button onPress={onShowWebviewClick}>Launch App</button>
+          <button onPress={onShowWebviewClick}>PLAY</button>
         </vstack>
         <vstack grow={webviewVisible} height={webviewVisible ? '100%' : '0%'}>
-          <vstack height={webviewVisible ? '100%' : '0%'}>
+          <vstack border="thick" borderColor="black" height={webviewVisible ? '100%' : '0%'}>
             <webview
               id="myWebView"
               url="index.html"

@@ -3,7 +3,7 @@ class App {
         const output = document.querySelector('#messageOutput');
         const usernameLabel = document.querySelector('#username');
         const gameWrapper = document.querySelector('#slangmanWrapper');
-        // const message = document.querySelector('#gameMsg');
+        // let message = document.querySelector('#gameMsg');
 
         // Game state variables
         this.words = [
