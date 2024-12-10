@@ -91,12 +91,14 @@ class App {
         const randomIndex = Math.floor(Math.random() * this.words.length);
         const randomWordObj = this.words[randomIndex];
         this.selectedWord = randomWordObj.word;
-        this.guessLength = randomWordObj.length;
+        this.guessLength = this.selectedWord.length;
         this.hint = randomWordObj.hint;
         this.remainingGuesses = this.guessLength;
+
         this.guessedLetters = [];
         this.wrongLetters = [];
         this.updateDisplay();
+        this.hangmanParts.forEach(part => part.style.display = "none");
     }
 
     // Method to handle user guesses
