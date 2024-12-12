@@ -16,7 +16,7 @@ Devvit.addMenuItem({
       title: 'Slangman',
       subredditName: subreddit.name,
       preview: (
-        <vstack height="100%" width="100%" alignment="middle center">
+        <vstack min-height="fit-content" height="450px" width="100%" alignment="middle center">
           <text size="large">Loading ...</text>
         </vstack>
       ),
