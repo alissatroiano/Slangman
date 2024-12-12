@@ -18,6 +18,7 @@ Devvit.addCustomPostType({
   name: 'Slangman',
   height: 'tall',
   render: (context) => {
+    const [directions, setDirections] = useState(0)
     // Load username with `useAsync` hook
     const [username] = useState(async () => {
       const currUser = await context.reddit.getCurrentUser();
@@ -64,12 +65,12 @@ Devvit.addCustomPostType({
           alignment="middle center"
         >
           <image
-            url="slangman_logo_1.png"
+            url="logo.png"
             description="logo"
             imageHeight={256}
             imageWidth={256}
-            height="300px"
-            width="300px"
+            height="250px"
+            width="250px"
           />
           <spacer />
           {/* <vstack alignment="start middle">
@@ -83,6 +84,16 @@ Devvit.addCustomPostType({
           </vstack> */}
           <spacer />
           <button onPress={onShowWebviewClick}>PLAY</button>
+          <spacer />
+          <button onPress={() => setDirections(directions => directions + 1)}
+        >
+          Directions
+        </button>
+        {directions ? (
+          <text>{`How to Play: `}</text>
+        ) : (
+          <text>&nbsp;</text>
+        )}
         </vstack>
         <vstack grow={webviewVisible} height={webviewVisible ? '100%' : '0%'}>
           <vstack border="thick" borderColor="black" height={webviewVisible ? '100%' : '0%'}>
