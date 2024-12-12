@@ -2,13 +2,14 @@
 @import url("https://use.typekit.net/gqi4iah.css");
 
 :root {
-  --primary-color: #5021dc;
-  --secondary-color: #7760fa;
+  --primary-color: #6b40eb;
+  --secondary-color: #917ff6;
   --link-color: #8594e4;
+  --accent-color: rgb(255, 15, 247);
   --light-color: #d5def5;
   --dark: #2d0d83;
   --darker: #1b0754;
-  --darkest: #0a0124;
+  --darkest: #08001f;
   --text-shadow: 2px 4px 3px rgba(67, 15, 88, 0.1);
 }
 /* 
@@ -148,6 +149,24 @@ span#wrong-letters {
   color: var(--link-color);
   font-weight: 800;
 }
+
+p#hint  {
+  color:var(--secondary-color);
+  font-family: sans-serif;
+  font-style: italic;
+  text-transform: lowercase;
+  margin-top: 10px;
+}
+
+#displayWord {
+  margin: 15px auto;
+  color: var(--accent-color);
+}
+
+/* .wrong-lettters,
+.remaining-guesses {
+  color: var(--link-color);
+} */
 
 p#progressMsg {
   color: var(--accent-color);
@@ -334,4 +353,21 @@ pre {
   top: 270px;
   left: 178px;
   transform: rotate(-8deg);
+}
+
+/* ----- Game Over */
+#liveReload {
+  margin: 10px auto;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: var(--secondary-color);
+  color: var(--darkest);
+}
+
+h3.game-win-text {
+  margin: 20px auto;
+  font-family: sans-serif;
+  text-transform: uppercase;
 }

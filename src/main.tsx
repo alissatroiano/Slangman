@@ -89,8 +89,10 @@ Devvit.addCustomPostType({
         >
           Directions
         </button>
+        <spacer />
         {directions ? (
-          <text>{`How to Play: `}</text>
+         <text 
+          > Guess the word by guessing letters one at a time. Use the provided hint to guide you!</text>
         ) : (
           <text>&nbsp;</text>
         )}

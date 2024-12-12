@@ -7,13 +7,9 @@ class App {
 
         // Game state variables
         this.words = [
-            { word: "sus", hint: "Short for 'suspicious,'" },
             { word: "delulu", hint: "Delusional or having unrealistic beliefs or expectations" },
             { word: "bussin", hint: "It's very good." },
-            { word: "goat", hint: "Greatest of All Time" },
-            { word: "dude", hint: "A versatile term used to address a person, often a friend or acquaintance. It's commonly associated with surfer culture but has become a mainstream slang term" },
             { word: "savage", hint: "Used to describe someone or something as fearless, bold, or ruthless. It's often used humorously or ironically to praise someone's audacity or wit" },
-            { word: "fomo", hint: "acronym for 'fear of missing out,' referring to the anxiety or apprehension one feels when they think others are having enjoyable experiences without them" },
             { word: "malarkey", hint: "Nonsense or foolish talk" },
             { word: "ratchet", hint: "Low-class or trashy" }
         ];
@@ -23,6 +19,7 @@ class App {
         this.guessedLetters = [];
         this.wrongLetters = [];
         this.displayWord = "";
+
 
         // DOM elements
         this.letterInput = document.getElementById("letter-input");
@@ -40,8 +37,8 @@ class App {
             document.getElementById("left-arm"),
             document.getElementById("right-leg"),
             document.getElementById("left-leg"),
-          ];
-          
+        ];
+
         // Bind event listeners
         this.letterInput.addEventListener("input", this.handleGuess.bind(this));
         this.resetButton.addEventListener("click", this.resetGame.bind(this));
@@ -79,6 +76,29 @@ class App {
                 }
             }
         });
+    }
+
+    initializeGameUI() {
+        gameWrapper.innerHTML = `
+            <p id="hint"></p>
+            <p id="displayWord"></p>
+            <p class="wrong-letters">Wrong letters: <span id="wrong-letters"></span></p>
+            <p class="remaining-guesses">Remaining guesses: <span id="remaining-guesses"></span></p>
+            <input type="text" id="letter-input" maxlength="1" autofocus />
+            <button id="reset-btn">Play Again</button>
+        `;
+
+        // Re-bind DOM elements to the game
+        this.letterInput = document.getElementById("letter-input");
+        this.displayWordElement = document.getElementById("displayWord");
+        this.hintElement = document.getElementById("hint");
+        this.remainingGuessesElement = document.getElementById("remaining-guesses");
+        this.wrongLettersElement = document.getElementById("wrong-letters");
+        this.resetButton = document.getElementById("reset-btn");
+
+        // Re-bind event listeners
+        this.letterInput.addEventListener("input", this.handleGuess.bind(this));
+        this.resetButton.addEventListener("click", this.resetGame.bind(this));
     }
 
     startNewGame() {
@@ -120,25 +140,29 @@ class App {
 
             if (this.wrongLetters.length <= this.hangmanParts.length) {
                 this.hangmanParts[this.wrongLetters.length - 1].style.display = "flex";
-              }
+            }
         }
 
         // Check game status
         if (this.remainingGuesses <= 0) {
-            gameMsg.innerHTML = `Game Over! The word was: <strong>${this.selectedWord} </strong>`;
-            // window.parent?.showToast(
-            //     {
-            //         type: 'gameOver',
-            //         data: { message: `Game Over! The word was: ${this.selectedWord}` },
-            //     },
-            //     '*'
-            // );
-            this.resetGame();
+            gameWrapper.innerHTML = `
+        <p>Game Over! The word was: <strong>${this.selectedWord}</strong></p>
+        <button class="btn" id="liveReload">Play again?</button>
+    `;
+
+            let liveReload = document.querySelector("#liveReload");
+            liveReload.addEventListener("click", () => {
+                this.initializeGameUI();
+                this.resetGame();
+            });
+
             return;
         }
 
         if (this.getDisplayWord() === this.selectedWord) {
-            gameMsg.innerHTML = `Congratulations! You guessed the right word: <strong> ${this.selectedWord} </strong>`;
+            gameWrapper.innerHTML = `
+            <h3 class="game-win-text">Congratulations! You guessed the right word: <strong> ${this.selectedWord} </strong></h3>
+             <button class="btn" id="liveReload">Play again?</button>`;
             // window.parent?.showToast(
             //     {
             //         type: 'gameWin',
@@ -146,7 +170,11 @@ class App {
             //     },
             //     '*'
             // );
-            this.resetGame();
+            let liveReload = document.querySelector("#liveReload");
+            liveReload.addEventListener("click", () => {
+                this.initializeGameUI();
+                this.resetGame();
+            });
             return;
         }
 
@@ -168,6 +196,7 @@ class App {
         this.hintElement.textContent = this.hint;
         this.remainingGuessesElement.textContent = this.remainingGuesses;
         this.wrongLettersElement.textContent = this.wrongLetters.join(", ");
+
     }
 }
 
