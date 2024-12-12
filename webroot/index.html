@@ -20,104 +20,107 @@
             </div>
         </div>
         <div class="row wrapper font-primary">
-            <div id="hangman-wrapper" style="position: relative; max-width: 250px; height: 250px;">
-                <!-- Hangman parts (initially hidden) -->
-                <!--Head-->
-                <div id="head">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256"
-                        style="enable-background:new 0 0 256 256;" xml:space="preserve">
-                        <rect class="st0" width="256" height="256" />
-                        <g>
-                            <circle style="fill:url(#SVGID_00000034073163968956867740000008452879218124006305_);"
-                                cx="55.4" cy="123.7" r="29.9" />
-                            <radialGradient id="SVGID_00000120517025620417944270000013944930190746270629_"
-                                cx="1247.8051" cy="-224.6845" r="384.44"
-                                gradientTransform="matrix(0.47 0 0 -0.33 -457.82 25.03)" gradientUnits="userSpaceOnUse">
-                                <stop offset="0" style="stop-color:#FEFFFF" />
-                                <stop offset="0.4" style="stop-color:#FEFFFF" />
-                                <stop offset="0.51" style="stop-color:#F9FCFC" />
-                                <stop offset="0.62" style="stop-color:#EDF3F5" />
-                                <stop offset="0.7" style="stop-color:#DEE9EC" />
-                                <stop offset="0.72" style="stop-color:#D8E4E8" />
-                                <stop offset="0.76" style="stop-color:#CCD8DF" />
-                                <stop offset="0.8" style="stop-color:#C8D5DD" />
-                                <stop offset="0.83" style="stop-color:#CCD6DE" />
-                                <stop offset="0.85" style="stop-color:#D8DBE2" />
-                                <stop offset="0.88" style="stop-color:#EDE3E9" />
-                                <stop offset="0.9" style="stop-color:#FFEBEF" />
-                            </radialGradient>
-                            <ellipse style="fill:url(#SVGID_00000120517025620417944270000013944930190746270629_);"
-                                cx="128.1" cy="149.3" rx="85.3" ry="64" />
-                            <!--./head-->
-                        </g>
-                    </svg>
-                </div>
-                <!--./head-->
-                <!--Left Ear-->
-                <div id="body" style="display: none;">
-                    <svg>
-                        <g>
-                            <radialGradient id="SVGID_1_" cx="1398.1552" cy="1.811" r="127.45" fx="1398.1552" fy="-7.319" gradientTransform="matrix(0.47 0 0 -0.41 -457.82 108.3)" gradientUnits="userSpaceOnUse">
-                                <stop  offset="0" style="stop-color:#FEFFFF"/>
-                                <stop  offset="0.4" style="stop-color:#FEFFFF"/>
-                                <stop  offset="0.51" style="stop-color:#F9FCFC"/>
-                                <stop  offset="0.62" style="stop-color:#EDF3F5"/>
-                                <stop  offset="0.7" style="stop-color:#DEE9EC"/>
-                                <stop  offset="0.72" style="stop-color:#D8E4E8"/>
-                                <stop  offset="0.76" style="stop-color:#CCD8DF"/>
-                                <stop  offset="0.8" style="stop-color:#C8D5DD"/>
-                                <stop  offset="0.83" style="stop-color:#CCD6DE"/>
-                                <stop  offset="0.85" style="stop-color:#D8DBE2"/>
-                                <stop  offset="0.88" style="stop-color:#EDE3E9"/>
-                                <stop  offset="0.9" style="stop-color:#FFEBEF"/>
-                            </radialGradient>
-                            <circle class="st1" cx="200.6" cy="123.7" r="29.9"/>
-                                <radialGradient id="SVGID_00000034073163968956867740000008452879218124006305_" cx="1089.3892" cy="1.811" r="127.45" fx="1089.3892" fy="-7.319" gradientTransform="matrix(0.47 0 0 -0.41 -457.82 108.3)" gradientUnits="userSpaceOnUse">
-                                <stop  offset="0" style="stop-color:#FEFFFF"/>
-                                <stop  offset="0.4" style="stop-color:#FEFFFF"/>
-                                <stop  offset="0.51" style="stop-color:#F9FCFC"/>
-                                <stop  offset="0.62" style="stop-color:#EDF3F5"/>
-                                <stop  offset="0.7" style="stop-color:#DEE9EC"/>
-                                <stop  offset="0.72" style="stop-color:#D8E4E8"/>
-                                <stop  offset="0.76" style="stop-color:#CCD8DF"/>
-                                <stop  offset="0.8" style="stop-color:#C8D5DD"/>
-                                <stop  offset="0.83" style="stop-color:#CCD6DE"/>
-                                <stop  offset="0.85" style="stop-color:#D8DBE2"/>
-                                <stop  offset="0.88" style="stop-color:#EDE3E9"/>
-                                <stop  offset="0.9" style="stop-color:#FFEBEF"/>
-                            </radialGradient>
-                        </g>
-                    </svg>
-                </div>
-                <!--Right Ear-->
-                <div id="right-arm" style="display: none;">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="250px" y="0px"
-                        style="enable-background:new 0 0 256 256;" xml:space="preserve">
-                        <rect class="st0" width="256" height="256" />
-                        <g>
-                            <radialGradient id="SVGID_1_" cx="1398.1552" cy="1.811" r="127.45" fx="1398.1552"
-                                fy="-7.319" gradientTransform="matrix(0.47 0 0 -0.41 -457.82 108.3)"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="0" style="stop-color:#FEFFFF" />
-                                <stop offset="0.4" style="stop-color:#FEFFFF" />
-                                <stop offset="0.51" style="stop-color:#F9FCFC" />
-                                <stop offset="0.62" style="stop-color:#EDF3F5" />
-                                <stop offset="0.7" style="stop-color:#DEE9EC" />
-                                <stop offset="0.72" style="stop-color:#D8E4E8" />
-                                <stop offset="0.76" style="stop-color:#CCD8DF" />
-                                <stop offset="0.8" style="stop-color:#C8D5DD" />
-                                <stop offset="0.83" style="stop-color:#CCD6DE" />
-                                <stop offset="0.85" style="stop-color:#D8DBE2" />
-                                <stop offset="0.88" style="stop-color:#EDE3E9" />
-                                <stop offset="0.9" style="stop-color:#FFEBEF" />
-                            </radialGradient>
-                        </g>
-                    </svg>
-                </div>
+            <div id="hangman-wrapper" style="position: relative; width: 300px; height: 250px;">
+<!-- Hangman parts (initially hidden) -->
+<!--Head-->
+<div id="head">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256"
+        style="enable-background:new 0 0 256 256;" xml:space="preserve">
+        <rect class="st0" width="256" height="256" />
+        <g>
+            <circle style="fill:url(#SVGID_00000034073163968956867740000008452879218124006305_);"
+                cx="55.4" cy="123.7" r="29.9" />
+            <radialGradient id="SVGID_00000120517025620417944270000013944930190746270629_"
+                cx="1247.8051" cy="-224.6845" r="384.44"
+                gradientTransform="matrix(0.47 0 0 -0.33 -457.82 25.03)" gradientUnits="userSpaceOnUse">
+                <stop offset="0" style="stop-color:#FEFFFF" />
+                <stop offset="0.4" style="stop-color:#FEFFFF" />
+                <stop offset="0.51" style="stop-color:#F9FCFC" />
+                <stop offset="0.62" style="stop-color:#EDF3F5" />
+                <stop offset="0.7" style="stop-color:#DEE9EC" />
+                <stop offset="0.72" style="stop-color:#D8E4E8" />
+                <stop offset="0.76" style="stop-color:#CCD8DF" />
+                <stop offset="0.8" style="stop-color:#C8D5DD" />
+                <stop offset="0.83" style="stop-color:#CCD6DE" />
+                <stop offset="0.85" style="stop-color:#D8DBE2" />
+                <stop offset="0.88" style="stop-color:#EDE3E9" />
+                <stop offset="0.9" style="stop-color:#FFEBEF" />
+            </radialGradient>
+            <ellipse style="fill:url(#SVGID_00000120517025620417944270000013944930190746270629_);"
+                cx="128.1" cy="149.3" rx="85.3" ry="64" />
+        </g>
+    </svg>
+</div>
+<!--./head-->
 
-                <div id="left-arm"
+<!--Left-Ear-->
+<div id="body" style="display: none;">
+    <svg>
+        <rect class="st0" width="256" height="256" />
+        <g>  
+            <radialGradient id="SVGID_1_" cx="1398.1552" cy="1.811" r="127.45" fx="1398.1552" fy="-7.319" gradientTransform="matrix(0.47 0 0 -0.41 -457.82 108.3)" gradientUnits="userSpaceOnUse">
+                <stop  offset="0" style="stop-color:#FEFFFF"/>
+                <stop  offset="0.4" style="stop-color:#FEFFFF"/>
+                <stop  offset="0.51" style="stop-color:#F9FCFC"/>
+                <stop  offset="0.62" style="stop-color:#EDF3F5"/>
+                <stop  offset="0.7" style="stop-color:#DEE9EC"/>
+                <stop  offset="0.72" style="stop-color:#D8E4E8"/>
+                <stop  offset="0.76" style="stop-color:#CCD8DF"/>
+                <stop  offset="0.8" style="stop-color:#C8D5DD"/>
+                <stop  offset="0.83" style="stop-color:#CCD6DE"/>
+                <stop  offset="0.85" style="stop-color:#D8DBE2"/>
+                <stop  offset="0.88" style="stop-color:#EDE3E9"/>
+                <stop  offset="0.9" style="stop-color:#FFEBEF"/>
+            </radialGradient>
+            <circle class="st1" cx="200.6" cy="123.7" r="29.9"/>  
+                <radialGradient id="SVGID_00000034073163968956867740000008452879218124006305_" cx="1089.3892" cy="1.811" r="127.45" fx="1089.3892" fy="-7.319" gradientTransform="matrix(0.47 0 0 -0.41 -457.82 108.3)" gradientUnits="userSpaceOnUse">
+                <stop  offset="0" style="stop-color:#FEFFFF"/>
+                <stop  offset="0.4" style="stop-color:#FEFFFF"/>
+                <stop  offset="0.51" style="stop-color:#F9FCFC"/>
+                <stop  offset="0.62" style="stop-color:#EDF3F5"/>
+                <stop  offset="0.7" style="stop-color:#DEE9EC"/>
+                <stop  offset="0.72" style="stop-color:#D8E4E8"/>
+                <stop  offset="0.76" style="stop-color:#CCD8DF"/>
+                <stop  offset="0.8" style="stop-color:#C8D5DD"/>
+                <stop  offset="0.83" style="stop-color:#CCD6DE"/>
+                <stop  offset="0.85" style="stop-color:#D8DBE2"/>
+                <stop  offset="0.88" style="stop-color:#EDE3E9"/>
+                <stop  offset="0.9" style="stop-color:#FFEBEF"/>
+            </radialGradient>
+                <circle style="fill:url(#SVGID_00000034073163968956867740000008452879218124006305_);" cx="55.4" cy="123.7" r="29.9"/>
+        </g>
+    </svg>
+</div>
+<!--./left-ear-->
+
+<!--Right Ear-->
+<div id="right-arm" style="display: none;">
+    <svg>
+        <rect class="st0" width="256" height="256" />
+        <g>  
+            <radialGradient id="SVGID_1_" cx="1398.1552" cy="1.811" r="127.45" fx="1398.1552" fy="-7.319" gradientTransform="matrix(0.47 0 0 -0.41 -457.82 108.3)" gradientUnits="userSpaceOnUse">
+                <stop  offset="0" style="stop-color:#FEFFFF"/>
+                <stop  offset="0.4" style="stop-color:#FEFFFF"/>
+                <stop  offset="0.51" style="stop-color:#F9FCFC"/>
+                <stop  offset="0.62" style="stop-color:#EDF3F5"/>
+                <stop  offset="0.7" style="stop-color:#DEE9EC"/>
+                <stop  offset="0.72" style="stop-color:#D8E4E8"/>
+                <stop  offset="0.76" style="stop-color:#CCD8DF"/>
+                <stop  offset="0.8" style="stop-color:#C8D5DD"/>
+                <stop  offset="0.83" style="stop-color:#CCD6DE"/>
+                <stop  offset="0.85" style="stop-color:#D8DBE2"/>
+                <stop  offset="0.88" style="stop-color:#EDE3E9"/>
+                <stop  offset="0.9" style="stop-color:#FFEBEF"/>
+            </radialGradient>
+            <circle class="st1" cx="200.6" cy="123.7" r="29.9"/>
+            
+        </g>
+    </svg>
+</div>
+<!--./right-ear-->
+
+ <div id="left-arm"
                     style="width: 50px; height: 3px; background: pink; position: absolute; top: 110px; right: 0; rotate: 30deg; transform-origin: right bottom; display: none;">
                 </div>
                 <div id="right-leg"
