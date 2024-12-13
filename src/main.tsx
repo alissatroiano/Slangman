@@ -73,16 +73,6 @@ Devvit.addCustomPostType({
             width="250px"
           />
           <spacer />
-          {/* <vstack alignment="start middle">
-            <hstack>
-              <text size="medium">Username:</text>
-              <text size="medium" weight="bold">
-                {' '}
-                {username ?? ''}
-              </text>
-            </hstack>
-          </vstack> */}
-          <spacer />
           <button onPress={onShowWebviewClick}>PLAY</button>
           <spacer />
           <button onPress={() => setDirections(directions => directions + 1)}
@@ -92,7 +82,8 @@ Devvit.addCustomPostType({
         <spacer />
         {directions ? (
          <text 
-          > Guess the word by guessing letters one at a time. Use the provided hint to guide you!</text>
+          > Guess the word one letter at a time.
+          Use the hint to guide you!</text>
         ) : (
           <text>&nbsp;</text>
         )}
