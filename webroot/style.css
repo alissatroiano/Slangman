@@ -5,6 +5,7 @@
   --primary-color: #6b40eb;
   --secondary-color: #917ff6;
   --link-color: #8594e4;
+  --placeholder: #c7cdf5c8;
   --accent-color: rgb(255, 15, 247);
   --light-color: #d5def5;
   --dark: #2d0d83;
@@ -106,8 +107,20 @@ p#displayWord {
 input[type=text] {
   color: #7760fa;
   background-color: transparent;
-  border: 1px solid var(--primary-color);
-  margin-top: 10px;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 15px;
+  border-top: none;
+}
+
+input::placeholder {
+  color: var(--placeholder);
+  text-transform: lowercase;
+}
+
+input {
+  color: var(--accent-color);
 }
 
 h1,
@@ -138,16 +151,21 @@ h3 {
   font-weight: 600;
 }
 
+.remaining-guesses,
+.wrong-letters,
 .content {
   color: var(--secondary-color);
   font-weight: 400;
+  text-transform: lowercase;
+  font-family: sans-serif;
+  letter-spacing: .525px;
 }
 
 span#hint,
-span#remaining-guesses,
+#remaining-guesses,
 span#wrong-letters {
-  color: var(--link-color);
-  font-weight: 800;
+  color: var(--accent-color);
+  font-weight: 600;
 }
 
 p#hint  {

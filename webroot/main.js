@@ -80,12 +80,16 @@ class App {
 
     initializeGameUI() {
         gameWrapper.innerHTML = `
-            <p id="hint"></p>
-            <p id="displayWord"></p>
-            <p class="wrong-letters">Wrong letters: <span id="wrong-letters"></span></p>
-            <p class="remaining-guesses">Remaining guesses: <span id="remaining-guesses"></span></p>
-            <input type="text" id="letter-input" maxlength="1" autofocus />
-            <button id="reset-btn">Play Again</button>
+        <div class="content font-primary">
+                    <p id="displayWord"></p>
+                    <input placeholder="Guess letter here" type="text" class="typing-input" id="letter-input" maxlength="1" />
+                    <div class="details display-7">
+                        <p class="hint">Hint: <span id="hint"></span></p>
+                        <p class="guess-left">Remaining guesses: <span id="remaining-guesses"></span></p>
+                        <p class="wrong-letter">Wrong letters: <span id="wrong-letters"></span></p>
+                    </div>
+                    <button id="reset-btn">New Word</button>
+           
         `;
 
         // Re-bind DOM elements to the game
@@ -125,51 +129,51 @@ class App {
     handleGuess() {
         let guess = this.letterInput.value.toLowerCase(); // Convert to lowercase
         this.letterInput.value = ""; // Clear input field
-
+    
         // Ignore if guess is not a single letter or already guessed
         if (!/^[a-z]$/.test(guess) || this.guessedLetters.includes(guess) || this.wrongLetters.includes(guess)) {
             return;
         }
-
+    
         // Process the guess
         if (this.selectedWord.includes(guess)) {
             this.guessedLetters.push(guess);
         } else {
             this.wrongLetters.push(guess);
             this.remainingGuesses--;
-
+    
             if (this.wrongLetters.length <= this.hangmanParts.length) {
                 this.hangmanParts[this.wrongLetters.length - 1].style.display = "flex";
             }
         }
-
+    
+        // Update the display before checking for win/loss
+        this.updateDisplay();
+    
         // Check game status
         if (this.remainingGuesses <= 0) {
             gameWrapper.innerHTML = `
-        <p>Game Over! The word was: <strong>${this.selectedWord}</strong></p>
-        <button class="btn" id="liveReload">Play again?</button>
-    `;
-
+            <h3 class="game-win-text">☠️ Game Over! The word was: <strong>${this.selectedWord}</strong></h3>
+            <button class="btn" id="liveReload">Play again?</button>
+        `;
+    
             let liveReload = document.querySelector("#liveReload");
             liveReload.addEventListener("click", () => {
                 this.initializeGameUI();
                 this.resetGame();
             });
-
+    
             return;
         }
-
+    
         if (this.getDisplayWord() === this.selectedWord) {
+            // Ensure the full word is displayed before ending the game
+            this.updateDisplay();
+    
             gameWrapper.innerHTML = `
-            <h3 class="game-win-text">Congratulations! You guessed the right word: <strong> ${this.selectedWord} </strong></h3>
-             <button class="btn" id="liveReload">Play again?</button>`;
-            // window.parent?.showToast(
-            //     {
-            //         type: 'gameWin',
-            //         data: { message: `Congratulations! You guessed the word: ${this.selectedWord}` },
-            //     },
-            //     '*'
-            // );
+                <h3 class="game-win-text">🎉 Congratulations! You guessed the word: <strong>${this.selectedWord}</strong></h3>
+                <button class="btn" id="liveReload">Play again?</button>`;
+            
             let liveReload = document.querySelector("#liveReload");
             liveReload.addEventListener("click", () => {
                 this.initializeGameUI();
@@ -177,9 +181,6 @@ class App {
             });
             return;
         }
-
-        // Update the display
-        this.updateDisplay();
     }
 
     // Method to generate the display word with underscores
