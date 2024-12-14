@@ -6,13 +6,7 @@ class App {
         // const message = document.querySelector('#gameMsg');
 
         // Game state variables
-        this.words = [
-            { word: "delulu", hint: "Delusional or having unrealistic beliefs or expectations" },
-            { word: "bussin", hint: "It's very good." },
-            { word: "savage", hint: "Used to describe someone or something as fearless, bold, or ruthless. It's often used humorously or ironically to praise someone's audacity or wit" },
-            { word: "malarkey", hint: "Nonsense or foolish talk" },
-            { word: "ratchet", hint: "Low-class or trashy" }
-        ];
+        this.words = []; // Initially empty, will be populated from JSON
         this.selectedWord = "";
         this.hint = "";
         this.remainingGuesses = 0;
@@ -44,7 +38,7 @@ class App {
         this.resetButton.addEventListener("click", this.resetGame.bind(this));
 
         // Start the game
-        this.startNewGame(); // Call startNewGame instead of resetGame here
+        this.loadWords().then(() => this.startNewGame());
 
         window.addEventListener('message', (ev) => {
             const { type, data } = ev.data;
@@ -76,6 +70,19 @@ class App {
                 }
             }
         });
+    }
+
+     // Method to load words from JSON
+     async loadWords() {
+        try {
+            const response = await fetch("data/words.json"); // Fetch JSON file
+            if (!response.ok) throw new Error(`Failed to fetch words: ${response.status}`);
+            this.words = await response.json(); // Parse JSON and assign to this.words
+            console.log("Words loaded successfully:", this.words);
+        } catch (error) {
+            console.error("Error loading words:", error);
+            alert("Failed to load word list. Please try again later.");
+        }
     }
 
     initializeGameUI() {
