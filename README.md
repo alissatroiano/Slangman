@@ -1,4 +1,4 @@
-![Slangman Logo](https://i.im.ge/2024/12/15/zPqui4.logo.png)
+![Slangman Logo](assets/logo.png)
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
