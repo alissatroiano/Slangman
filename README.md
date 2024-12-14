@@ -1,18 +1,15 @@
-![Slangman Logo](assets/slangman.png)
-
-# Slangman
+![Slangman Logo](assets/logo.png)
 
 ## Table of Contents
-- [Slangman](#slangman)
-  - [Table of Contents](#table-of-contents)
-  - [Description](#description)
-  - [How To Play](#how-to-play)
-  - [Installation](#installation)
-    - [Local](#local)
-    - [Reddit Production](#reddit-production)
-  - [Technologies](#technologies)
-  - [Testing](#testing)
-  - [Credits](#credits)
+- [Table of Contents](#table-of-contents)
+- [Description](#description)
+- [How To Play](#how-to-play)
+- [Installation](#installation)
+  - [Local](#local)
+  - [Reddit Production](#reddit-production)
+- [Technologies](#technologies)
+- [Testing](#testing)
+- [Credits](#credits)
 
 ## Description
 
@@ -43,8 +40,9 @@ To run Slangman locally:
 3. Copy the URL (HTTPS, SSH, or GitHub CLI depending on your local environment)
 4. Visit a command line environment in your local env and type,  `git clone https://github.com/alissatroiano/Slangman.git`
 5. `cd slangman/`
-6. Install dependencies `npm install`
-7. 
+6. `cd webroot`
+7. `python3 -m http.server` 
+8. Visit localhost::8000 to play locally
 
 ### Reddit Production
 
@@ -53,7 +51,8 @@ To run Slangman on Reddit:
 1. Visit the [Slangman Playtest Subreddit](https://www.reddit.com/r/playtest_404/)
 2. Click on the dropdown menu
 3. Select 'Create Slangman Post'
-
+4. A toast will appear reading, "Created Slangman post!"
+5. Click 'Play' to start the game.
 
 ## Technologies
 

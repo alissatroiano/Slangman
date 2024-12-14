@@ -8,7 +8,6 @@ type WebViewMessage =
     data: { username: string };
   };
 
-
 Devvit.configure({
   redditAPI: true,
   redis: true,
