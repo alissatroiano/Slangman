@@ -121,7 +121,7 @@ class App {
     resetGame() {
         const randomIndex = Math.floor(Math.random() * this.words.length);
         const randomWordObj = this.words[randomIndex];
-        this.selectedWord = randomWordObj.word;
+        this.selectedWord = randomWordObj.word.toLowerCase();
         this.guessLength = this.selectedWord.length;
         this.hint = randomWordObj.hint;
         this.remainingGuesses = this.guessLength;

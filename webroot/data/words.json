@@ -108,15 +108,15 @@
         "hint": "For fuck sake"
     },
     {
-        "word": "e-boy",
+        "word": "eBoy",
         "hint": "similar to emo or goth culture, but they use the internet to express themselves."
     },
     {
-        "word": "e-girl",
+        "word": "eGirl",
         "hint": "similar to emo or goth culture, but they use the internet to express themselves."
     },
     {
-        "word": "Big yikes",
+        "word": "BigYikes",
         "hint": "Used to describe something embarrassing."
     },
     {
@@ -165,14 +165,10 @@
     },
     {
         "word": "Finesse",
-        "hint": "Finesse means to trick or manipulate someone or a situation in order to get what you want."
+        "hint": "To trick or manipulate someone or a situation in order to get what you want."
     },
     {
-        "word": "I’m weak",
-        "hint": "Similar to \"I'm dead\", this is just another term to use when you find something hilarious"
-    },
-    {
-        "word": "Main character",
+        "word": "MainCharacter",
         "hint": "a phrase used to describe someone who is generally well-liked and charismatic. It can also be used to describe someone when they're making a scene, but not necessarily in a bad way"
     },
     {
@@ -180,17 +176,14 @@
         "hint": "A shortened version of \"sister\", this term is typically used to greet a friend, no matter their gender."
     },
     {
-        "word": "Sending me",
+        "word": "SendingMe",
         "hint": "Another term to use if you find something particularly funny."
     },
     {
         "word": "Gaup",
         "hint": "Money, and lots of it."
     },
-    {
-        "word": "This ain’t it, chief",
-        "hint": "Another way of giving disapproval for something."
-    },
+  
     {
         "word": "Extra",
         "hint": "Someone who is out there and enjoys taking things to a new level of flamboyance."
@@ -208,7 +201,7 @@
         "hint": "Has two definitions. It can be used as a shortened version of \"as hell.\" It can also be used as an acronym for age/sex/location."
     },
     {
-        "word": "Bang 30s",
+        "word": "scrap",
         "hint": "To get in a physical altercation with someone."
     },
     {
@@ -216,15 +209,11 @@
         "hint": "Originally meaning \"to be your self and not care about how others view you\", The word is now used to indicate an opinion or something that someone agrees with. It is especially common in political slang and discussions."
     },
     {
-        "word": "Beat your face",
-        "hint": "To apply makeup to the face."
-    },
-    {
-        "word": "Big mad",
+        "word": "BigMad",
         "hint": "Term used to describe when someone is excessively angry."
     },
     {
-        "word": "Body count",
+        "word": "BodyCount",
         "hint": "A euphemism for how many people one has had sex with. Initially referred to specifically sexual intercourse, but was expanded to include all forms of sex."
     },
     {
@@ -252,11 +241,11 @@
         "hint": "A major improvement in one's self, usually an improvement in appearance, confidence, and style. Frequently used in a context relating to puberty."
     },
     {
-        "word": "I oop",
+        "word": "I-oop",
         "hint": "Used to express shock, embarrassment, and or amusement."
     },
     {
-        "word": "t's giving…",
+        "word": "t's-giving…",
         "hint": "Describes the vibes or connotation of something."
     },
     {
@@ -268,7 +257,7 @@
         "hint": "Short for mediocre"
     },
     {
-        "word": "Not you",
+        "word": "notYou",
         "hint": "Used to condemn or poke fun at someone or something."
     },
     {
@@ -276,7 +265,7 @@
         "hint": "Someone who cannot think for themselves and/or has no or little control over their own life. Someone that is ready to agree with popular opinion unquestioningly and always believes what they are told. Gullible"
     },
     {
-        "word": "OK boomer",
+        "word": "OKBoomer",
         "hint": "Derogatory term directed towards Baby Boomers. Used as a response when boomers are deemed to be out of touch with younger generations"
     },
     {
@@ -340,7 +329,7 @@
         "hint": "As fuck"
     },
     {
-        "word": "Big brain",
+        "word": "BigBrain",
         "hint": "When you have done something silly making you feel like your own brain shrinks as you regret all of your life"
     },
     {
@@ -367,10 +356,7 @@
         "word": "Fr",
         "hint": "For real"
     },
-    {
-        "word": "I can’t even",
-        "hint": "an expression commonly used when someone is feeling either so overjoyed or exasperated that they can’t even find the right words; depending on the context."
-    },
+
     {
         "word": "Ion",
         "hint": "I don’t"
@@ -384,7 +370,7 @@
         "hint": "A stereotype for women who behave extremely unreasonably and childish – especially towards service staff or people of colour – and tend to invoke their racial privilege"
     },
     {
-        "word": "Low key",
+        "word": "Lowkey",
         "hint": "Secretly"
     },
     {
@@ -400,7 +386,7 @@
         "hint": "Not Gonna Lie"
     },
     {
-        "word": "Pick me",
+        "word": "PickMe",
         "hint": "Type of girls who claim that they are nothing like other girls, in order to get attention from guys (also see ‘simping’ below). It’s a derogatory term."
     },
     {
@@ -408,8 +394,8 @@
         "hint": "Short for ‘baby boomer’, referring to older folks born 1946 to 1964 – but mostly used to clap back at pretty much anyone who’s older and not so in-the-know."
     },
     {
-        "word": "Sleeping on",
-        "hint": "When you \"sleep on\" something, you overlook or underestimate it"
+        "word": "SleepOn",
+        "hint": "When you do this with something, you overlook or underestimate it"
     },
     {
         "word": "Shade",
@@ -432,7 +418,7 @@
         "hint": "Stands for desperate, usually for attention"
     },
     {
-        "word": "Thirst trap",
+        "word": "Thirsttrap",
         "hint": "a social media post intended to, uh, entice viewers and get attention."
     },
     {
@@ -452,7 +438,7 @@
         "hint": "means no or know. It functions as a more dramatic way of saying \"no\" or \"know,\" and sounds like \"no\" with an Australian accent."
     },
     {
-        "word": "Say less",
+        "word": "SayLess",
         "hint": "A shortened version of \"say no more.\""
     },
     {
@@ -488,15 +474,11 @@
         "hint": "term born out of the popularity of the high-end fashion brand. These days, it means that something is good"
     },
     {
-        "word": "Hot girl summer",
-        "hint": "Hands down one of the biggest slang terms to hit pop culture in the summer of 2019, hot girl summer is about women having a good time and being unapologetic about who they are"
-    },
-    {
         "word": "Sturdy",
         "hint": "used to describe someone's dance moves. It's usually used in the phrase \"get sturdy\", which means that someone is performing a specific type of dance in which they move their legs, spin, and hop."
     },
     {
-        "word": "Skill issue",
+        "word": "SkillIssue",
         "hint": "used to blame someone for their own loss."
     },
     {
@@ -568,7 +550,7 @@
         "hint": "I love you"
     },
     {
-        "word": "Pink flags",
+        "word": "Pinkflags",
         "hint": "Based on the idea of red flags, pink flags are on step down. They aren’t huge warning signals that something is wrong, but they can hint that this relationship isn’t super healthy"
     },
     {
