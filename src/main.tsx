@@ -8,6 +8,7 @@ type WebViewMessage =
     data: { username: string };
   };
 
+
 Devvit.configure({
   redditAPI: true,
   redis: true,
@@ -73,15 +74,17 @@ Devvit.addCustomPostType({
             width="250px"
           />
           <spacer />
-          <button onPress={onShowWebviewClick}>PLAY</button>
+          <button icon="play-outline" onPress={onShowWebviewClick}>PLAY  
+          </button>
+
           <spacer />
-          <button onPress={() => setDirections(directions => directions + 1)}
+          <button icon="info-outline" onPress={() => setDirections(directions => directions + 1)}
         >
-          Directions
+          DIRECTIONS
         </button>
         <spacer />
         {directions ? (
-         <text 
+         <text wrap
           > Guess the word one letter at a time.
           Use the hint to guide you!</text>
         ) : (

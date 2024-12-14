@@ -3,5 +3,5 @@
   "compilerOptions": {
     "noEmit": true
   },
-  "include": ["./src/**/*", "test.js"]
+  "include": ["./src/**/*", "test.js", "./assets/**/*"]
 }

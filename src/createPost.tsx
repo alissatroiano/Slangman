@@ -16,12 +16,12 @@ Devvit.addMenuItem({
       title: 'Slangman',
       subredditName: subreddit.name,
       preview: (
-        <vstack min-height="fit-content" height="450px" width="100%" alignment="middle center">
+        <vstack min-height="100vh" width="100%" alignment="middle center">
           <text size="large">Loading ...</text>
         </vstack>
       ),
     });
-    context.ui.showToast({ text: 'Created post!' });
+    context.ui.showToast({ text: 'Created Slangman post!' });
     ui.navigateTo(post);
   },
 });

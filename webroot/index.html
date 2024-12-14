@@ -4,10 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="UTF-8" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.typekit.net/gqi4iah.css">
-    <title>slangman</title>
+    <title>slangman</title> 
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -16,11 +13,18 @@
         <div class="row wrapper font-primary">
             <div id="hangman-wrapper" class="hangmanWrap" style="position: relative; width: 150px; height: 180px;">
                 <!-- Stand -->
-                <div style="width: 120px; height: 10px; background:rgb(158, 95, 236); position: absolute; top: 0;"></div>
-                <div style="width: 7.5px; height: 200px; background: rgb(158, 95, 236); position: absolute; top: 0; left: 45px;"></div>
-                <div style="width: 90px; height: 10px; background: rgb(158, 95, 236); position: absolute; top: 0; right: 0;"></div>
-                <div style="width: 5px; height: 20px; background: rgb(158, 95, 236); position: absolute; top: 10px; right: 0;"></div>
-              
+                <div style="width: 120px; height: 10px; background:rgb(158, 95, 236); position: absolute; top: 0;">
+                </div>
+                <div
+                    style="width: 7.5px; height: 200px; background: rgb(158, 95, 236); position: absolute; top: 0; left: 45px;">
+                </div>
+                <div
+                    style="width: 90px; height: 10px; background: rgb(158, 95, 236); position: absolute; top: 0; right: 0;">
+                </div>
+                <div
+                    style="width: 5px; height: 20px; background: rgb(158, 95, 236); position: absolute; top: 10px; right: 0;">
+                </div>
+
                 <!-- Hangman parts (initially hidden) -->
                 <div id="head" style="display: none;" class="head"></div>
                 <div id="body" style="display: none;" class="torso"></div>
@@ -30,33 +34,36 @@
                 <div id="left-leg" style="display: none;" class="leftleg"></div>
                 <div id="right-foot" style="display: none;" class="rightleg"></div>
                 <div id="left-foot" style="display: none;" class="leftfoot"></div>
-              </div>              
-        </div>
-            <div class="col-12"  id="gameWrapper">
-                <div class="content font-primary">
-                    <p id="displayWord"></p>
-                    <input placeholder="Guess letter here" type="text" class="typing-input" id="letter-input" maxlength="1" />
-                    <div class="details display-7">
-                        <p class="hint">Hint: <span id="hint"></span></p>
-                        <p class="guess-left">Remaining guesses: <span id="remaining-guesses"></span></p>
-                        <p class="wrong-letter">Wrong letters: <span id="wrong-letters"></span></p>
-                    </div>
-                    <button id="reset-btn">New Word</button>
-                </div>
             </div>
+        </div>
+        <div class="col-12" id="gameWrapper">
+            <div class="content font-primary">
+                <p id="displayWord"></p>
+                <input placeholder="Guess letter here" type="text" class="typing-input" id="letter-input"
+                    maxlength="1" />
+                <div class="details display-7">
+                    <p class="hint">Hint: <span id="hint"></span></p>
+                    <p class="guess-left">Remaining guesses: <span id="remaining-guesses"></span></p>
+                    <p class="wrong-letter">Wrong letters: <span id="wrong-letters"></span></p>
+                </div>
+                <button id="reset-btn">New Word</button>
+            </div>
+        </div>
         </div>
         <div class="message font-primary" id="progressMsg">
             <span id="gameMsg"></span>
         </div>
     </section>
     <script type="application/javascript" src="main.js"></script>
-    <!--load bootstrap scripts-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Montserrat', 'Oswald']
+            }
+        });
+    </script>
+
 </body>
 
 </html>
