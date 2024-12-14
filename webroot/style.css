@@ -15,12 +15,12 @@
 
 @font-face {
   font-family: 'Oswald';
-  src: url('../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf')  format('truetype');
+  src: url('../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf')  format('truetype');
+  src: url('../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
 /* 
@@ -48,14 +48,14 @@ body {
 
 .font-italic {
   font-family: "montserrat", sans-serif;
-  font-style: italic;  
+  font-style: italic;
 }
 
 span.text-special {
   font-family: "montserrat", sans-serif;
   font-variation-settings: "wght" 800;
   letter-spacing: 1px;
-  text-transform: lowercase;  
+  text-transform: lowercase;
   color: var(--secondary-color);
 }
 
@@ -102,8 +102,7 @@ span.text-special {
   background: transparent;
 }
 
-strong 
-{
+strong {
   color: var(--secondary-color);
   font-weight: 800;
   text-transform: uppercase;
@@ -186,9 +185,9 @@ span#wrong-letters {
   font-weight: 600;
 }
 
-p#hint  {
+p#hint {
   font-family: "montserrat", sans-serif;
-  color:var(--secondary-color);
+  color: var(--secondary-color);
   font-style: italic;
   text-transform: lowercase;
   margin-top: 10px;
@@ -291,6 +290,7 @@ pre {
   0% {
     transform: rotate(-10deg);
   }
+
   100% {
     transform: rotate(10deg);
   }
@@ -346,11 +346,20 @@ pre {
 
 @keyframes wave {
   0% {
-    transform: rotate(-20deg);
+    transform: rotate(0deg);
   }
+
+  50% {
+    transform: rotate(-15deg);
+  }
+
   100% {
-    transform: rotate(40deg);
+    transform: rotate(0deg);
   }
+}
+
+.wave {
+  animation: wave 0.5s ease infinite;
 }
 
 .rightarm {
@@ -366,13 +375,22 @@ pre {
   transform-origin: 0%;
 }
 
-@keyframes wave2 {
+@keyframes wave-2 {
   0% {
-    transform: rotate(20deg);
+    transform: rotate(0deg);
   }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
   100% {
-    transform: rotate(-40deg);
+    transform: rotate(0deg);
   }
+}
+
+.wave-2 {
+  animation: wave-2 0.5s ease infinite;
 }
 
 
@@ -398,6 +416,32 @@ pre {
   top: 200px;
   left: 154px;
   transform: rotate(-8deg);
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 10.5s ease-in-out;
 }
 
 /* ----- Game Over */

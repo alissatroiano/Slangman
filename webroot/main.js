@@ -74,8 +74,8 @@ class App {
         });
     }
 
-     // Method to load words from JSON
-     async loadWords() {
+    // Method to load words from JSON
+    async loadWords() {
         try {
             const response = await fetch("data/words.json"); // Fetch JSON file
             if (!response.ok) throw new Error(`Failed to fetch words: ${response.status}`);
@@ -138,63 +138,76 @@ class App {
     handleGuess() {
         let guess = this.letterInput.value.toLowerCase(); // Convert to lowercase
         this.letterInput.value = ""; // Clear input field
-    
+
         // Ignore invalid guesses or duplicates
         if (!/^[a-z]$/.test(guess) || this.guessedLetters.includes(guess) || this.wrongLetters.includes(guess)) {
             return;
         }
-    
+
         // Process the guess
         if (this.selectedWord.includes(guess)) {
             this.guessedLetters.push(guess);
         } else {
             this.wrongLetters.push(guess);
             this.remainingGuesses--;
-    
+
             // Calculate parts per guess
             const totalParts = this.hangmanParts.length;
             const wordLength = this.selectedWord.length;
             const partsPerGuess = wordLength <= 6 ? 2 : 1; // Show 2 parts for short words, 1 for long words
-    
+
             // Calculate total parts to show so far
             let partsToShow = this.wrongLetters.length * partsPerGuess;
-    
+
             // Ensure partsToShow doesn't exceed the total available parts
             partsToShow = Math.min(partsToShow, totalParts);
-    
+
             // Display the parts
             for (let i = 0; i < partsToShow; i++) {
                 this.hangmanParts[i].style.display = "flex";
+                this.partsToShow++;
+            }
+
+            // Animate elements if guesses exceed 8
+            if (this.wrongLetters.length > 8) {
+                document.getElementById("left-foot").classList.add("wave");
+            }
+
+            if (this.wrongLetters.length > 9) {
+                document.getElementById("right-foot").classList.add("wave-2");
+            }
+
+            if (this.wrongLetters.length > 10) {
+                document.getElementById("hangman-wrapper").classList.add("shake"); // Shake the entire wrapper
             }
         }
-    
         // Update the display before checking for win/loss
         this.updateDisplay();
-    
+
         // Check game status
         if (this.remainingGuesses <= 0) {
             gameWrapper.innerHTML = `
                 <h3 class="game-win-text">☠️ Game Over! The word was: <strong>${this.selectedWord}</strong></h3>
                 <button class="btn" id="liveReload">Play again?</button>
             `;
-    
+
             let liveReload = document.querySelector("#liveReload");
             liveReload.addEventListener("click", () => {
                 this.initializeGameUI();
                 this.resetGame();
             });
-    
+
             return;
         }
-    
+
         if (this.getDisplayWord() === this.selectedWord) {
             // Ensure the full word is displayed before ending the game
             this.updateDisplay();
-    
+
             gameWrapper.innerHTML = `
                 <h3 class="game-win-text">🎉 Congratulations! You guessed the word: <strong>${this.selectedWord}</strong></h3>
                 <button class="btn" id="liveReload">Play again?</button>`;
-            
+
             let liveReload = document.querySelector("#liveReload");
             liveReload.addEventListener("click", () => {
                 this.initializeGameUI();
@@ -203,7 +216,7 @@ class App {
             return;
         }
     }
-    
+
     // Method to generate the display word with underscores
     getDisplayWord() {
         return this.selectedWord
