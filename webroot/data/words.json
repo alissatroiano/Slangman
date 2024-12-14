@@ -25,7 +25,7 @@
     },
     {
         "word": "Cheugy",
-        "hint": "Derogatory term for Millennials. Used when millennials are perceived to be excessively attempting to be trendy or stylish."
+        "hint": "An adjective mocking someone or something as “uncool”—they are out of touch with current trends or trying too hard to be trendy. Similar slang terms are basic or normie. "
     },
     {
         "word": "TFW",
@@ -133,7 +133,7 @@
     },
     {
         "word": "Simp",
-        "hint": "Sycophancy, being overly affectionate in pursuit of a sexual relationship"
+        "hint": "Someone who does too much for someone they like."
     },
     {
         "word": "Camp",
@@ -183,7 +183,6 @@
         "word": "Gaup",
         "hint": "Money, and lots of it."
     },
-  
     {
         "word": "Extra",
         "hint": "Someone who is out there and enjoys taking things to a new level of flamboyance."
@@ -191,10 +190,6 @@
     {
         "word": "Clapback",
         "hint": "Swift and witty response to an insult or critique"
-    },
-    {
-        "word": "@ me",
-        "hint": "Pronounced \"at me.\" Used on social media when someone feels attacked by a post."
     },
     {
         "word": "Asl",
@@ -223,6 +218,14 @@
     {
         "word": "Bussy",
         "hint": "\"Boy Pussy,\" i.e. a man's anus."
+    },
+    {
+        "word": "phrogging",
+        "hint": "The act of secretly living in another person’s home without their knowledge or permission."
+    },
+    {
+        "word": "steez",
+        "hint": "Refers to a person’s unique style, especially if it is fashionable and cool."
     },
     {
         "word": "Cringe",
@@ -356,7 +359,6 @@
         "word": "Fr",
         "hint": "For real"
     },
-
     {
         "word": "Ion",
         "hint": "I don’t"
@@ -572,5 +574,29 @@
     {
         "word": "ship",
         "hint": "When someone approves of a relationship, they \"this word\" it."
+    },
+    {
+        "word": "caucacity",
+        "hint": "Caucacity is a slang term used to make fun of behaviors perceived to be stereotypically white or to call out what’s seen to be a particularly bold instance of white privilege or racism."
+    },
+    {
+        "word": "caucacity",
+        "hint": "Caucacity is a slang term used to make fun of behaviors perceived to be stereotypically white or to call out what’s seen to be a particularly bold instance of white privilege or racism."
+    },
+    {
+        "word": "algospeak",
+        "hint": "Refers to coded language and euphemisms used on social media platforms to avoid having content removed or filtered by an alg"
+    },
+    {
+        "word": "pinkwashing",
+        "hint": "A critical term used to refer to the practice of attempting to benefit from purported support for LGBTQ+ rights, often as a way to profit or to distract from a separate agenda."
+    },
+    {
+        "word": "boreout",
+        "hint": "A state of dissatisfaction and demotivation that a person experiences due to being bored and unchallenged at work."
+    },
+    {
+        "word": "kittenfishing",
+        "hint": "The act of making oneself appear more desirable in online dating apps by using  old or edited photos and inflated profile descriptions."
     }
 ]

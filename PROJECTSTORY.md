@@ -3,7 +3,7 @@
 
 ## Inspiration
 
-Slangman is a US slang word game inspired by the classic game, 'Hangman'. Slangman's humorous (and sometimes explicit) dictionary of words was inspired by the fun, anonymous nature of the Reddit platform.
+Slangman is an English word game inspired by the classic game, 'Hangman'. Slangman's humorous (and sometimes explicit) dictionary of words was inspired by Gen Z slang words and terms that are commonly used on the internet. The reason I decided to build this particular game is because I think the fun, anonymous nature of the Reddit platform makes it the perfect place to host a tounge in cheek game like this.
 
 ## What it does
 
@@ -37,19 +37,37 @@ Once the game webview is triggered, users can do the following with Slangman:
 
 Slangman was built with the following tools and technologies:
 
-- Devvit **[Webviews](https://developers.reddit.com/docs/webviews)** were used to integrate Slangman with Reddit's platform.
+#### Configurations
+
+- [Devvit CLI](https://developers.reddit.com/docs/dev_guide) was used to login to Reddit from local CLI, make a project,  choose a template, and run playtests throughout the development process.
+
+- Devvit **[Webviews](https://developers.reddit.com/docs/webviews)** were used to run HTML, CSS, and JavaScript within my  Reddit app.
+
+#### Game Logic 
 
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) was used to build out the game's functionality.
   
-- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5) was used to build the page where the game renders. 
+- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5) markup was used to build a layout for the game to render. 
 
-- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) was used to apply custom styles to Slangman
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) was used to update layout structure and style the game.
 
-- [Git](https://git-scm.com/doc)
+#### Version Control
 
-- [GitHub](https://github.com)
+- [Git](https://git-scm.com/doc) was used for version control management during local development
 
+- [GitHub](https://github.com) was used to host the project repository/codebase.
 
+#### Data
+
+The game's current dataset (or dictionary) of words was compiled using the following sources:
+
+- [Urban Dictionary Words and Definitions](https://www.kaggle.com/datasets/therohk/urban-dictionary-words-dataset)
+
+- [Gen Z Words and Phrases Dataset](https://www.kaggle.com/datasets/tawfiayeasmin/gen-z-words-and-phrases-dataset)
+
+- [Dictionary.com Slang Dictionary](https://www.dictionary.com/e/slang/)
+
+- [Urban Dictionary Terms Dataset](https://www.kaggle.com/datasets/athontz/urban-dictionary-terms)
 
 ## Challenges I ran into
 
