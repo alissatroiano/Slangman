@@ -1,20 +1,594 @@
 [
-    { 
-        "word": "delulu", 
-        "hint": "Delusional or having unrealistic beliefs or expectations" 
+    {
+        "word": "delulu",
+        "hint": "Delusional or having unrealistic beliefs or expectations"
     },
-    { 
-        "word": "bussin", 
-        "hint": "It's very good." 
+    {
+        "word": "bussin",
+        "hint": "It's very good."
     },
-    { "word": "savage", 
-    "hint": "Used to describe someone or something as fearless, bold, or ruthless. It's often used humorously or ironically to praise someone's audacity or with" 
-},
-    { 
-        "word": "malarkey", 
-        "hint": "Nonsense or foolish talk" 
+    {
+        "word": "savage",
+        "hint": "Used to describe someone or something as fearless, bold, or ruthless. It's often used humorously or ironically to praise someone's audacity or with"
     },
-    { 
-        "word": "ratchet", 
-        "hint": "Low-class or trashy" }
+    {
+        "word": "malarkey",
+        "hint": "Nonsense or foolish talk"
+    },
+    {
+        "word": "ratchet",
+        "hint": "Low-class or trashy"
+    },
+    {
+        "word": "Dank",
+        "hint": "excellent or of very high quality"
+    },
+    {
+        "word": "Cheugy",
+        "hint": "Derogatory term for Millennials. Used when millennials are perceived to be excessively attempting to be trendy or stylish."
+    },
+    {
+        "word": "TFW",
+        "hint": "That feeling when"
+    },
+    {
+        "word": "Woke",
+        "hint": "being politically aware"
+    },
+    {
+        "word": "Bop",
+        "hint": "An excellent song or album."
+    },
+    {
+        "word": "GOAT",
+        "hint": "The greatest of all time"
+    },
+    {
+        "word": "Smol",
+        "hint": "Something that is small, and in most cases exceptionally adorable."
+    },
+    {
+        "word": "Fam",
+        "hint": "Fam is a shorter word for family, but don't be fooled– it can be used to describe your friends or the way Millennials use \"bro\"."
+    },
+    {
+        "word": "Glow up",
+        "hint": "a makeover or transformation from bad to good."
+    },
+    {
+        "word": "Stan",
+        "hint": "Supporting something. Specifically used in some cases to the idolatry support of personalities."
+    },
+    {
+        "word": "Ghosting",
+        "hint": "common amongst the earlier talking stages of a relationship. Ghosting someone means you start ignoring them or stop texting them back."
+    },
+    {
+        "word": "Salty",
+        "hint": "Used when someone feels jealous"
+    },
+    {
+        "word": "Sip tea",
+        "hint": "Gossiping"
+    },
+    {
+        "word": "Drip",
+        "hint": "Another way of saying swag. A term for a cool or sexy trend or style."
+    },
+    {
+        "word": "Iykyk",
+        "hint": "Acronym for \"If you know, you know.\" Used to describe inside jokes."
+    },
+    {
+        "word": "Rent free",
+        "hint": "To be constantly thinking or upset about something."
+    },
+    {
+        "word": "Catch these hands",
+        "hint": "Used to threaten physical combat with someone"
+    },
+    {
+        "word": "Drag",
+        "hint": "If you drag someone, you're criticizing or making fun of them"
+    },
+    {
+        "word": "Bussin’",
+        "hint": "Used to say something is good. Primarily used to describe food"
+    },
+    {
+        "word": "Snatched",
+        "hint": "If someone is looking snatched, they look really good, particularly their outfit"
+    },
+    {
+        "word": "Cancel culture",
+        "hint": "a form of shaming the actions or opinions of a public figure, company, or organization"
+    },
+    {
+        "word": "Ffs",
+        "hint": "For fuck sake"
+    },
+    {
+        "word": "e-boy",
+        "hint": "similar to emo or goth culture, but they use the internet to express themselves."
+    },
+    {
+        "word": "e-girl",
+        "hint": "similar to emo or goth culture, but they use the internet to express themselves."
+    },
+    {
+        "word": "Big yikes",
+        "hint": "Used to describe something embarrassing."
+    },
+    {
+        "word": "Finna",
+        "hint": "shortened term for saying \"I'm going to\""
+    },
+    {
+        "word": "cap",
+        "hint": "A lie or exaggeration"
+    },
+    {
+        "word": "High-key",
+        "hint": "the opposite of being low-key."
+    },
+    {
+        "word": "Simp",
+        "hint": "Sycophancy, being overly affectionate in pursuit of a sexual relationship"
+    },
+    {
+        "word": "Camp",
+        "hint": "Something that is ironically trendy. One might consider Crocs to be of the camp aesthetic."
+    },
+    {
+        "word": "Snack",
+        "hint": "a person that you find attractive"
+    },
+    {
+        "word": "Take several seats",
+        "hint": "If someone is really getting on your nerves, you might tell them to take several seats."
+    },
+    {
+        "word": "Sheesh",
+        "hint": "To praise someone when they are doing something good. The one being praised is to do the \"ice in my veins\" pose popularized by Basketball player D'Angelo Russell."
+    },
+    {
+        "word": "Hits different",
+        "hint": "Something that is better in a peculiar manner"
+    },
+    {
+        "word": "Bet",
+        "hint": "Yes, ok, \"it's on.\""
+    },
+    {
+        "word": "Periodt",
+        "hint": "Used to add emphasis to something"
+    },
+    {
+        "word": "Finesse",
+        "hint": "Finesse means to trick or manipulate someone or a situation in order to get what you want."
+    },
+    {
+        "word": "I’m weak",
+        "hint": "Similar to \"I'm dead\", this is just another term to use when you find something hilarious"
+    },
+    {
+        "word": "Main character",
+        "hint": "a phrase used to describe someone who is generally well-liked and charismatic. It can also be used to describe someone when they're making a scene, but not necessarily in a bad way"
+    },
+    {
+        "word": "Sis",
+        "hint": "A shortened version of \"sister\", this term is typically used to greet a friend, no matter their gender."
+    },
+    {
+        "word": "Sending me",
+        "hint": "Another term to use if you find something particularly funny."
+    },
+    {
+        "word": "Gaup",
+        "hint": "Money, and lots of it."
+    },
+    {
+        "word": "This ain’t it, chief",
+        "hint": "Another way of giving disapproval for something."
+    },
+    {
+        "word": "Extra",
+        "hint": "Someone who is out there and enjoys taking things to a new level of flamboyance."
+    },
+    {
+        "word": "Clapback",
+        "hint": "Swift and witty response to an insult or critique"
+    },
+    {
+        "word": "@ me",
+        "hint": "Pronounced \"at me.\" Used on social media when someone feels attacked by a post."
+    },
+    {
+        "word": "Asl",
+        "hint": "Has two definitions. It can be used as a shortened version of \"as hell.\" It can also be used as an acronym for age/sex/location."
+    },
+    {
+        "word": "Bang 30s",
+        "hint": "To get in a physical altercation with someone."
+    },
+    {
+        "word": "Based",
+        "hint": "Originally meaning \"to be your self and not care about how others view you\", The word is now used to indicate an opinion or something that someone agrees with. It is especially common in political slang and discussions."
+    },
+    {
+        "word": "Beat your face",
+        "hint": "To apply makeup to the face."
+    },
+    {
+        "word": "Big mad",
+        "hint": "Term used to describe when someone is excessively angry."
+    },
+    {
+        "word": "Body count",
+        "hint": "A euphemism for how many people one has had sex with. Initially referred to specifically sexual intercourse, but was expanded to include all forms of sex."
+    },
+    {
+        "word": "Boujee",
+        "hint": "A high-class/materialistic person."
+    },
+    {
+        "word": "Bussy",
+        "hint": "\"Boy Pussy,\" i.e. a man's anus."
+    },
+    {
+        "word": "Cringe",
+        "hint": "A response to embarrassment or social awkwardness"
+    },
+    {
+        "word": "Ded",
+        "hint": "Used to describe something humorous to such an extent as to \"kill you.\""
+    },
+    {
+        "word": "Facts",
+        "hint": "The truth"
+    },
+    {
+        "word": "Glow-up",
+        "hint": "A major improvement in one's self, usually an improvement in appearance, confidence, and style. Frequently used in a context relating to puberty."
+    },
+    {
+        "word": "I oop",
+        "hint": "Used to express shock, embarrassment, and or amusement."
+    },
+    {
+        "word": "t's giving…",
+        "hint": "Describes the vibes or connotation of something."
+    },
+    {
+        "word": "Lit",
+        "hint": "Colloquially: \"Enlightened\", \"Hot\", \"Fire.\" The new hotness; something remarkable, interesting, fun or amusing. Generally positive."
+    },
+    {
+        "word": "Mid",
+        "hint": "Short for mediocre"
+    },
+    {
+        "word": "Not you",
+        "hint": "Used to condemn or poke fun at someone or something."
+    },
+    {
+        "word": "NPC",
+        "hint": "Someone who cannot think for themselves and/or has no or little control over their own life. Someone that is ready to agree with popular opinion unquestioningly and always believes what they are told. Gullible"
+    },
+    {
+        "word": "OK boomer",
+        "hint": "Derogatory term directed towards Baby Boomers. Used as a response when boomers are deemed to be out of touch with younger generations"
+    },
+    {
+        "word": "On god",
+        "hint": "Short for \"I swear to god.\" Means that a person's statement is frank."
+    },
+    {
+        "word": "Ratio",
+        "hint": "When an internet post has a comparable number of comments/replies to \"likes\", which is usually indicative of a poor reception."
+    },
+    {
+        "word": "Rizz",
+        "hint": "One's courtship/seduction skills"
+    },
+    {
+        "word": "Sksksk",
+        "hint": "Used to convey happiness/laughter"
+    },
+    {
+        "word": "Slaps",
+        "hint": "Used to refer to something (typically music) that is perceived to be good."
+    },
+    {
+        "word": "Sus",
+        "hint": "Short for suspect/suspicious."
+    },
+    {
+        "word": "Slay",
+        "hint": "To do something well."
+    },
+    {
+        "word": "Tea",
+        "hint": "Gossiping (spilling the tea)"
+    },
+    {
+        "word": "Understood the assignment",
+        "hint": "To understand what was supposed to be done; to do something well"
+    },
+    {
+        "word": "Valid",
+        "hint": "Understandable"
+    },
+    {
+        "word": "Vibe Check",
+        "hint": "To check one's personality or attitude"
+    },
+    {
+        "word": "Vibing",
+        "hint": "describes a generic positive feeling that someone has about something"
+    },
+    {
+        "word": "Wig",
+        "hint": "To do something so well as to \"make one's wig fly off.\""
+    },
+    {
+        "word": "Word",
+        "hint": "Slang for \"okay.\""
+    },
+    {
+        "word": "Af",
+        "hint": "As fuck"
+    },
+    {
+        "word": "Big brain",
+        "hint": "When you have done something silly making you feel like your own brain shrinks as you regret all of your life"
+    },
+    {
+        "word": "Chad",
+        "hint": "Used to describe your typical alpha male"
+    },
+    {
+        "word": "Clapped",
+        "hint": "To be completely and utterly destroyed."
+    },
+    {
+        "word": "Clown",
+        "hint": "People who are completely unintelligent."
+    },
+    {
+        "word": "Cringy",
+        "hint": "anything that’s embarrassing or try-hard"
+    },
+    {
+        "word": "fomo",
+        "hint": "Fear of missing out"
+    },
+    {
+        "word": "Fr",
+        "hint": "For real"
+    },
+    {
+        "word": "I can’t even",
+        "hint": "an expression commonly used when someone is feeling either so overjoyed or exasperated that they can’t even find the right words; depending on the context."
+    },
+    {
+        "word": "Ion",
+        "hint": "I don’t"
+    },
+    {
+        "word": "IRL",
+        "hint": "In Real Life"
+    },
+    {
+        "word": "Karen",
+        "hint": "A stereotype for women who behave extremely unreasonably and childish – especially towards service staff or people of colour – and tend to invoke their racial privilege"
+    },
+    {
+        "word": "Low key",
+        "hint": "Secretly"
+    },
+    {
+        "word": "Mom",
+        "hint": "It just means to admire or look up to someone so much that you jokingly want to be adopted by them or have them as your second parent"
+    },
+    {
+        "word": "Dad",
+        "hint": "It just means to admire or look up to someone so much that you jokingly want to be adopted by them or have them as your second parent"
+    },
+    {
+        "word": "NGL",
+        "hint": "Not Gonna Lie"
+    },
+    {
+        "word": "Pick me",
+        "hint": "Type of girls who claim that they are nothing like other girls, in order to get attention from guys (also see ‘simping’ below). It’s a derogatory term."
+    },
+    {
+        "word": "Boomer",
+        "hint": "Short for ‘baby boomer’, referring to older folks born 1946 to 1964 – but mostly used to clap back at pretty much anyone who’s older and not so in-the-know."
+    },
+    {
+        "word": "Sleeping on",
+        "hint": "When you \"sleep on\" something, you overlook or underestimate it"
+    },
+    {
+        "word": "Shade",
+        "hint": "Diss. Also: throwing shade; being shady."
+    },
+    {
+        "word": "Shook",
+        "hint": "Surprised or shocked."
+    },
+    {
+        "word": "Smh",
+        "hint": "Shake my head’. Another one for texting, smh usually signifies exasperation"
+    },
+    {
+        "word": "TBH",
+        "hint": "short for “to be honest” and is usually used when making a comment or a joke (best to stick to texts with this one too)."
+    },
+    {
+        "word": "Thirsty",
+        "hint": "Stands for desperate, usually for attention"
+    },
+    {
+        "word": "Thirst trap",
+        "hint": "a social media post intended to, uh, entice viewers and get attention."
+    },
+    {
+        "word": "Yas",
+        "hint": "A very enthusiastic and celebratory way of saying yes!"
+    },
+    {
+        "word": "Yeet",
+        "hint": "The Gen Z version of YOLO (you only live once). Usually exclaimed (pretty loudly) when doing something risky or throwing an item very hard (most of the time for absolutely no reason at all and with absolutely no aim)."
+    },
+    {
+        "word": "ick",
+        "hint": "used to express disgust at something unpleasant or offensive."
+    },
+    {
+        "word": "naur",
+        "hint": "means no or know. It functions as a more dramatic way of saying \"no\" or \"know,\" and sounds like \"no\" with an Australian accent."
+    },
+    {
+        "word": "Say less",
+        "hint": "A shortened version of \"say no more.\""
+    },
+    {
+        "word": "Unserious",
+        "hint": "a more fun way of saying something or someone is ridiculous, or that it can't be taken seriously."
+    },
+    {
+        "word": "Gagged",
+        "hint": "To be “gagged” is to be shocked, amazed, et cetera."
+    },
+    {
+        "word": "Ate",
+        "hint": "If you “ate” something, it means you executed it extremely well."
+    },
+    {
+        "word": "Poggers",
+        "hint": "an expression that conveys excitement"
+    },
+    {
+        "word": "Heather",
+        "hint": "any lovely person who seems like they’re the main character, evoking as much admiration as jealousy"
+    },
+    {
+        "word": "Wth",
+        "hint": "What the hell"
+    },
+    {
+        "word": "Flex",
+        "hint": "Used to describe someone showing off, gloating, or parading around."
+    },
+    {
+        "word": "Gucci",
+        "hint": "term born out of the popularity of the high-end fashion brand. These days, it means that something is good"
+    },
+    {
+        "word": "Hot girl summer",
+        "hint": "Hands down one of the biggest slang terms to hit pop culture in the summer of 2019, hot girl summer is about women having a good time and being unapologetic about who they are"
+    },
+    {
+        "word": "Sturdy",
+        "hint": "used to describe someone's dance moves. It's usually used in the phrase \"get sturdy\", which means that someone is performing a specific type of dance in which they move their legs, spin, and hop."
+    },
+    {
+        "word": "Skill issue",
+        "hint": "used to blame someone for their own loss."
+    },
+    {
+        "word": "TNTL",
+        "hint": "Trying not to laugh"
+    },
+    {
+        "word": "G2G",
+        "hint": "Got to go"
+    },
+    {
+        "word": "YNK",
+        "hint": "You never know"
+    },
+    {
+        "word": "CSL",
+        "hint": "Can’t stop laughing"
+    },
+    {
+        "word": "GMTA",
+        "hint": "Great minds think alike"
+    },
+    {
+        "word": "IMO",
+        "hint": "In my opinion"
+    },
+    {
+        "word": "IMOH",
+        "hint": "In my humble opinion"
+    },
+    {
+        "word": "JK",
+        "hint": "Just kidding"
+    },
+    {
+        "word": "Bae",
+        "hint": "Short for “baby.\" Often a pet name for a crush or significant other."
+    },
+    {
+        "word": "SSDD",
+        "hint": "Some stuff, different day"
+    },
+    {
+        "word": "WYWH",
+        "hint": "Wish you were here"
+    },
+    {
+        "word": "Benching",
+        "hint": "Just like in sports, benching someone in dating means putting them to the side to date other people."
+    },
+    {
+        "word": "Breadcumbing",
+        "hint": "When someone leads you on by flirting and making you feel special but without any intention to actually commit to a relationship."
+    },
+    {
+        "word": "Cuffing",
+        "hint": "\"Cuffing\" simply means to get into a relationship."
+    },
+    {
+        "word": "DTR",
+        "hint": "Define the relationship"
+    },
+    {
+        "word": "Gaslighting",
+        "hint": "refers to a form of psychological manipulation in which a significant other makes you feel crazy or wrong, even when unjustified"
+    },
+    {
+        "word": "ILY",
+        "hint": "I love you"
+    },
+    {
+        "word": "Pink flags",
+        "hint": "Based on the idea of red flags, pink flags are on step down. They aren’t huge warning signals that something is wrong, but they can hint that this relationship isn’t super healthy"
+    },
+    {
+        "word": "Smash",
+        "hint": "means to have casual sex"
+    },
+    {
+        "word": "situationship",
+        "hint": "Describes two people who are not officially dating but who have feelings for each other"
+    },
+    {
+        "word": "Zaddy",
+        "hint": "Refers to an attractive, well-dressed man. Often, it’s an older man"
+    },
+    {
+        "word": "Zombied",
+        "hint": "This happens after someone ghosts you, and then decides to start talking to you again like nothing ever happened."
+    },
+    {
+        "word": "ship",
+        "hint": "When someone approves of a relationship, they \"this word\" it."
+    }
 ]
