@@ -2,7 +2,9 @@
 
 ## Inspiration
 
-Slangman is an English word game inspired by the classic game, 'Hangman'. Slangman's humorous (and sometimes explicit) dictionary of words was inspired by Gen Z slang words and terms that are commonly used on the internet. The reason I decided to build this particular game is because I think the fun, anonymous nature of the Reddit platform makes it the perfect place to host a tounge in cheek game like this.
+Slangman is an English slang word & phrase game influenced by the classic game, "Hangman". Slangman's humorous (and sometimes explicit) dictionary is a collection of English slang words and terms that are commonly used by Millenials & Gen Z's on the internet and casual settings. 
+
+I was inspired to build Slangman for this hackathon because I believe the fun, anonymous nature of Reddit's platform makes it the perfect place to host a game like this. I'm somewhat new - and freshly addicted - to Reddit myself, and I often don't understand what certain words, terms, and phrases mean. I have already learned a lot of new slang just from testing this, and I think it will be a fun learning experience for boomers and anyone that isn't up-to-current with the latest slang.
 
 ## What it does
 
@@ -29,7 +31,7 @@ Once the game webview is triggered, users can do the following with Slangman:
 - The user loses the game when the Slangman figurine is complete and they are out of guesses. 
 
 ##### Differences
-- Unlike classic Hangman, Slangman is **not limited to 8 guesses**. Because a lot of Gen Z words and phrases are abbreviated, Slangman was built with custom functionality, so the number of guesses varies based on the length of the current word.
+- Unlike classic Hangman, Slangman is **not limited to 8 guesses**. Because a lot of Gen Z and Millenial words and phrases are abbreviated, Slangman was built with custom functionality, so the number of guesses varies based on the length of the current word.
 - Slangman is animated, so he waves his arms around (in a comical cry for help from the user).
 
 ## How I built it

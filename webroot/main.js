@@ -31,6 +31,8 @@ class App {
             document.getElementById("left-arm"),
             document.getElementById("right-leg"),
             document.getElementById("left-leg"),
+            document.getElementById("right-foot"),
+            document.getElementById("left-foot")
         ];
 
         // Bind event listeners
@@ -137,7 +139,7 @@ class App {
         let guess = this.letterInput.value.toLowerCase(); // Convert to lowercase
         this.letterInput.value = ""; // Clear input field
     
-        // Ignore if guess is not a single letter or already guessed
+        // Ignore invalid guesses or duplicates
         if (!/^[a-z]$/.test(guess) || this.guessedLetters.includes(guess) || this.wrongLetters.includes(guess)) {
             return;
         }
@@ -149,8 +151,20 @@ class App {
             this.wrongLetters.push(guess);
             this.remainingGuesses--;
     
-            if (this.wrongLetters.length <= this.hangmanParts.length) {
-                this.hangmanParts[this.wrongLetters.length - 1].style.display = "flex";
+            // Calculate parts per guess
+            const totalParts = this.hangmanParts.length;
+            const wordLength = this.selectedWord.length;
+            const partsPerGuess = wordLength <= 6 ? 2 : 1; // Show 2 parts for short words, 1 for long words
+    
+            // Calculate total parts to show so far
+            let partsToShow = this.wrongLetters.length * partsPerGuess;
+    
+            // Ensure partsToShow doesn't exceed the total available parts
+            partsToShow = Math.min(partsToShow, totalParts);
+    
+            // Display the parts
+            for (let i = 0; i < partsToShow; i++) {
+                this.hangmanParts[i].style.display = "flex";
             }
         }
     
@@ -160,9 +174,9 @@ class App {
         // Check game status
         if (this.remainingGuesses <= 0) {
             gameWrapper.innerHTML = `
-            <h3 class="game-win-text">☠️ Game Over! The word was: <strong>${this.selectedWord}</strong></h3>
-            <button class="btn" id="liveReload">Play again?</button>
-        `;
+                <h3 class="game-win-text">☠️ Game Over! The word was: <strong>${this.selectedWord}</strong></h3>
+                <button class="btn" id="liveReload">Play again?</button>
+            `;
     
             let liveReload = document.querySelector("#liveReload");
             liveReload.addEventListener("click", () => {
@@ -189,7 +203,7 @@ class App {
             return;
         }
     }
-
+    
     // Method to generate the display word with underscores
     getDisplayWord() {
         return this.selectedWord
@@ -204,7 +218,6 @@ class App {
         this.hintElement.textContent = this.hint;
         this.remainingGuessesElement.textContent = this.remainingGuesses;
         this.wrongLettersElement.textContent = this.wrongLetters.join(", ");
-
     }
 }
 

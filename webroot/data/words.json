@@ -68,7 +68,7 @@
         "hint": "Used when someone feels jealous"
     },
     {
-        "word": "Sip tea",
+        "word": "SipTea",
         "hint": "Gossiping"
     },
     {
@@ -152,10 +152,6 @@
         "hint": "To praise someone when they are doing something good. The one being praised is to do the \"ice in my veins\" pose popularized by Basketball player D'Angelo Russell."
     },
     {
-        "word": "Hits different",
-        "hint": "Something that is better in a peculiar manner"
-    },
-    {
         "word": "Bet",
         "hint": "Yes, ok, \"it's on.\""
     },
@@ -168,16 +164,8 @@
         "hint": "To trick or manipulate someone or a situation in order to get what you want."
     },
     {
-        "word": "MainCharacter",
-        "hint": "a phrase used to describe someone who is generally well-liked and charismatic. It can also be used to describe someone when they're making a scene, but not necessarily in a bad way"
-    },
-    {
         "word": "Sis",
         "hint": "A shortened version of \"sister\", this term is typically used to greet a friend, no matter their gender."
-    },
-    {
-        "word": "SendingMe",
-        "hint": "Another term to use if you find something particularly funny."
     },
     {
         "word": "Gaup",
@@ -244,16 +232,16 @@
         "hint": "A major improvement in one's self, usually an improvement in appearance, confidence, and style. Frequently used in a context relating to puberty."
     },
     {
-        "word": "I-oop",
+        "word": "IOOP",
         "hint": "Used to express shock, embarrassment, and or amusement."
     },
     {
-        "word": "t's-giving…",
+        "word": "Tsgiving",
         "hint": "Describes the vibes or connotation of something."
     },
     {
         "word": "Lit",
-        "hint": "Colloquially: \"Enlightened\", \"Hot\", \"Fire.\" The new hotness; something remarkable, interesting, fun or amusing. Generally positive."
+        "hint": "The new hotness; something remarkable, interesting, fun or amusing."
     },
     {
         "word": "Mid",
@@ -298,14 +286,6 @@
     {
         "word": "Slay",
         "hint": "To do something well."
-    },
-    {
-        "word": "Tea",
-        "hint": "Gossiping (spilling the tea)"
-    },
-    {
-        "word": "Understoodtheassignment",
-        "hint": "To understand what was supposed to be done; to do something well"
     },
     {
         "word": "Valid",
@@ -553,7 +533,7 @@
     },
     {
         "word": "Pinkflags",
-        "hint": "Based on the idea of red flags, pink flags are on step down. They aren’t huge warning signals that something is wrong, but they can hint that this relationship isn’t super healthy"
+        "hint": "Based on the idea of red flags,these are one step down. They aren’t huge warning signals that something is wrong, but they can hint that this relationship isn’t super healthy"
     },
     {
         "word": "Smash",
@@ -577,11 +557,7 @@
     },
     {
         "word": "caucacity",
-        "hint": "Caucacity is a slang term used to make fun of behaviors perceived to be stereotypically white or to call out what’s seen to be a particularly bold instance of white privilege or racism."
-    },
-    {
-        "word": "caucacity",
-        "hint": "Caucacity is a slang term used to make fun of behaviors perceived to be stereotypically white or to call out what’s seen to be a particularly bold instance of white privilege or racism."
+        "hint": "A slang term used to make fun of behaviors perceived to be stereotypically white or to call out what’s seen to be a particularly bold instance of white privilege or racism."
     },
     {
         "word": "algospeak",
