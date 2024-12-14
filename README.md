@@ -38,6 +38,14 @@ The directions are simple:
 
 To run Slangman locally:
 
+1. Visit the project's [GitHub Repository](https://github.com/alissatroiano/Slangman)
+2. Click on the buttton reading, 'Code'
+3. Copy the URL (HTTPS, SSH, or GitHub CLI depending on your local environment)
+4. Visit a command line environment in your local env and type,  `git clone https://github.com/alissatroiano/Slangman.git`
+5. `cd slangman/`
+6. Install dependencies `npm install`
+7. 
+
 ### Reddit Production
 
 To run Slangman on Reddit:
