@@ -1,4 +1,4 @@
-![Slangman Logo](assets/logo.png)
+![Slangman Logo](https://i.im.ge/2024/12/15/zPdSOy.logo.png)
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
@@ -13,7 +13,7 @@
 
 ## Description
 
-Slangman is a play on the classic Hangman game, created for [Reddit's Games and Puzzles Hackathon](https://redditgamesandpuzzles.devpost.com/).
+Slangman is a word game created for [Reddit's Games and Puzzles Hackathon](https://redditgamesandpuzzles.devpost.com/). Slangman was inspired by the classic game, 'Hangman'.
 
 ## How To Play
 
@@ -27,7 +27,7 @@ The directions are simple:
 4. Once your Slangman post has been created, click 'Play'.
 5. Using the hint as your guide, type individual letters with your keyboard to guess the word
 
-- Note: Just like classic Hangman, the Hangman figure will display more body parts with each incorrect letter guessed and the user loses the game when the Slangman figurine is complete. Unlike classic Hangman, Slangman features custom functionality so the number of guesses varies based on the length of the current word.
+_**Note**: Much like classic Hangman, the Hangman figurine will display more body parts with each incorrect letter the user guesses. The user loses the game when the Slangman figurine is complete and they are out of guesses. Unlike the classic Hangman game, Slangman is not limited to 8 guesses. Because a lot of Gen Z words and phrases are abbreviated, Slangman was built with custom functionality, so the number of guesses varies based on the length of the current word._
 
 ## Installation
 
