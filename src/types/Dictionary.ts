@@ -1,4 +1,5 @@
-export type Dictionary = {
+export type Words = {
     name: string;
     words: string[];
+    hints: string[];
   };  

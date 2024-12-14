@@ -1,4 +1,4 @@
-[
+const Words = [
     { 
         "word": "delulu", 
         "hint": "Delusional or having unrealistic beliefs or expectations" 
@@ -18,3 +18,5 @@
         "word": "ratchet", 
         "hint": "Low-class or trashy" }
 ]
+
+export default Words;
