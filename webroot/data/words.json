@@ -9,7 +9,7 @@
     },
     {
         "word": "savage",
-        "hint": "Used to describe someone or something as fearless, bold, or ruthless. It's often used humorously or ironically to praise someone's audacity or with"
+        "hint": "Used to describe someone or something as fearless, bold, or ruthless. Often used ironically to praise someone's audacity"
     },
     {
         "word": "malarkey",
@@ -25,7 +25,7 @@
     },
     {
         "word": "Cheugy",
-        "hint": "An adjective mocking someone or something as “uncool”—they are out of touch with current trends or trying too hard to be trendy. Similar slang terms are basic or normie. "
+        "hint": "An adjective for “uncool”. Out of touch with current trends or trying too hard to be trendy."
     },
     {
         "word": "TFW",
@@ -49,7 +49,7 @@
     },
     {
         "word": "Fam",
-        "hint": "Fam is a shorter word for family, but don't be fooled– it can be used to describe your friends or the way Millennials use \"bro\"."
+        "hint": "A shortened word often used to describe close friends"
     },
     {
         "word": "GlowUp",
@@ -133,7 +133,7 @@
     },
     {
         "word": "Camp",
-        "hint": "Something that is ironically trendy. One might consider Crocs to be of the camp aesthetic."
+        "hint": "Something that is ironically trendy."
     },
     {
         "word": "Snack",
@@ -169,7 +169,7 @@
     },
     {
         "word": "Extra",
-        "hint": "Someone who is out there and enjoys taking things to a new level of flamboyance."
+        "hint": "Someone who is out there and enjoys taking things to a new level"
     },
     {
         "word": "Clapback",
@@ -177,7 +177,7 @@
     },
     {
         "word": "Asl",
-        "hint": "Has two definitions. It can be used as a shortened version of \"as hell.\" It can also be used as an acronym for age/sex/location."
+        "hint": "Has two definitions. One is a shortened version of a phrase, the other is an acronym (usually used online when getting to know someone)."
     },
     {
         "word": "scrap",
@@ -185,7 +185,7 @@
     },
     {
         "word": "Based",
-        "hint": "Originally meaning \"to be your self and not care about how others view you\", The word is now used to indicate an opinion or something that someone agrees with. It is especially common in political slang and discussions."
+        "hint": "Indicates an opinion or something that someone agrees with. It is especially common in political slang and discussions."
     },
     {
         "word": "BigMad",
@@ -193,7 +193,7 @@
     },
     {
         "word": "BodyCount",
-        "hint": "A euphemism for how many people one has had sex with. Initially referred to specifically sexual intercourse, but was expanded to include all forms of sex."
+        "hint": "A euphemism for how many people one has had sex with."
     },
     {
         "word": "Boujee",
@@ -249,7 +249,7 @@
     },
     {
         "word": "NPC",
-        "hint": "Someone who cannot think for themselves and/or has no or little control over their own life. Someone that is ready to agree with popular opinion unquestioningly and always believes what they are told. Gullible"
+        "hint": "Someone who agrees unquestioningly and always believes what they are told. Gullible"
     },
     {
         "word": "OKBoomer",
@@ -361,7 +361,7 @@
     },
     {
         "word": "NGL",
-        "hint": "Not Gonna Lie"
+        "hint": "Acronym for being honest"
     },
     {
         "word": "PickMe",
@@ -377,7 +377,7 @@
     },
     {
         "word": "Shade",
-        "hint": "Diss. Also: throwing shade; being shady."
+        "hint": "You throw this when you diss someone"
     },
     {
         "word": "Shook",
@@ -385,11 +385,11 @@
     },
     {
         "word": "Smh",
-        "hint": "Shake my head’. Another one for texting, smh usually signifies exasperation"
+        "hint": "Acronym used when you do not believe something, or do not approve of it."
     },
     {
         "word": "TBH",
-        "hint": "short for “to be honest” and is usually used when making a comment or a joke (best to stick to texts with this one too)."
+        "hint": "Acronym used when making a comment or a joke (best to stick to texts with this one too)."
     },
     {
         "word": "Thirsty",
@@ -401,11 +401,11 @@
     },
     {
         "word": "Yas",
-        "hint": "A very enthusiastic and celebratory way of saying yes!"
+        "hint": "Expressing great pleasure or excitement.!"
     },
     {
         "word": "Yeet",
-        "hint": "The Gen Z version of YOLO (you only live once). Usually exclaimed (pretty loudly) when doing something risky or throwing an item very hard (most of the time for absolutely no reason at all and with absolutely no aim)."
+        "hint": "The Gen Z version of YOLO. Usually exclaimed (loudly) when doing something risky or throwing an item very hard"
     },
     {
         "word": "ick",
@@ -413,7 +413,7 @@
     },
     {
         "word": "naur",
-        "hint": "means no or know. It functions as a more dramatic way of saying \"no\" or \"know,\" and sounds like \"no\" with an Australian accent."
+        "hint": "means no or know. Sounds like \"no\" with an Australian accent."
     },
     {
         "word": "SayLess",
@@ -425,11 +425,11 @@
     },
     {
         "word": "Gagged",
-        "hint": "To be “gagged” is to be shocked, amazed, et cetera."
+        "hint": "Shocked, amazed, et cetera."
     },
     {
         "word": "Ate",
-        "hint": "If you “ate” something, it means you executed it extremely well."
+        "hint": "Execute something extremely well."
     },
     {
         "word": "Poggers",
@@ -438,10 +438,6 @@
     {
         "word": "Heather",
         "hint": "any lovely person who seems like they’re the main character, evoking as much admiration as jealousy"
-    },
-    {
-        "word": "Wth",
-        "hint": "What the hell"
     },
     {
         "word": "Flex",
@@ -453,7 +449,7 @@
     },
     {
         "word": "Sturdy",
-        "hint": "used to describe someone's dance moves. It's usually used in the phrase \"get sturdy\", which means that someone is performing a specific type of dance in which they move their legs, spin, and hop."
+        "hint": "used to describe someone's dance moves."
     },
     {
         "word": "SkillIssue",
@@ -465,47 +461,47 @@
     },
     {
         "word": "G2G",
-        "hint": "Got to go"
+        "hint": "Acronym used when saying goodbye"
     },
     {
         "word": "YNK",
-        "hint": "You never know"
+        "hint": "Acronym that stands for a generally positive uncertainty"
     },
     {
         "word": "CSL",
-        "hint": "Can’t stop laughing"
+        "hint": "Acronym exaggerating laughing"
     },
     {
         "word": "GMTA",
-        "hint": "Great minds think alike"
+        "hint": "Acronym for likemindedness"
     },
     {
         "word": "IMO",
-        "hint": "In my opinion"
+        "hint": "Acronym used to conveye one's outlook"
     },
     {
         "word": "IMOH",
-        "hint": "In my humble opinion"
+        "hint": "Acronym used to modestly conveye one's outlook"
     },
     {
         "word": "JK",
-        "hint": "Just kidding"
+        "hint": "Acronym for jestings"
     },
     {
         "word": "Bae",
-        "hint": "Short for “baby.\" Often a pet name for a crush or significant other."
+        "hint": "Shortened word used as a pet name for a crush or significant other."
     },
     {
         "word": "SSDD",
-        "hint": "Some stuff, different day"
+        "hint": "Acronym for state of repetition"
     },
     {
         "word": "WYWH",
-        "hint": "Wish you were here"
+        "hint": "Acronym for longing someone was with you. Also the name of a Pink Floyd song"
     },
     {
         "word": "Benching",
-        "hint": "Just like in sports, benching someone in dating means putting them to the side to date other people."
+        "hint": "Putting someone aside to date other people."
     },
     {
         "word": "Breadcumbing",
@@ -513,7 +509,7 @@
     },
     {
         "word": "Cuffing",
-        "hint": "\"Cuffing\" simply means to get into a relationship."
+        "hint": "To get into a relationship."
     },
     {
         "word": "DTR",
@@ -525,11 +521,11 @@
     },
     {
         "word": "ILY",
-        "hint": "I love you"
+        "hint": "Acronym used to tell someone you admire them"
     },
     {
         "word": "Pinkflags",
-        "hint": "Based on the idea of red flags,these are one step down. They aren’t huge warning signals that something is wrong, but they can hint that this relationship isn’t super healthy"
+        "hint": "Not huge warning signals, but these can hint that a relationship isn’t super healthy"
     },
     {
         "word": "Smash",

@@ -3,16 +3,17 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta charset="UTF-8" />
-    <title>slangman</title>
+    <meta charset="UTF-8">
+    <title>Slangman</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body id="gamePage">
-    <section class="game container-fluid" id="slangmanWrapper">
+    <section id="slangmanWrapper">
         <div class="row wrapper font-primary">
-            <div id="hangman-wrapper" class="hangmanWrap" style="position: relative; width: 150px; height: 220px;">
+            <div id="hangmanWrapper" class="hangmanWrap" style="position: relative; width: 140px; height: 220px;">
                 <!-- Stand -->
+                 <div class="stand" id="hangmanStand">
                 <div style="width: 120px; height: 10px; background:rgb(158, 95, 236); position: absolute; top: 0;">
                 </div>
                 <div
@@ -24,7 +25,8 @@
                 <div
                     style="width: 5px; height: 20px; background: rgb(158, 95, 236); position: absolute; top: 10px; right: 0;">
                 </div>
-
+            </div>
+                <div class="hangman-body" id="hangmanBody">
                 <!-- Hangman parts (initially hidden) -->
                 <div id="head" style="display: none;" class="head"></div>
                 <div id="body" style="display: none;" class="torso"></div>
@@ -35,13 +37,15 @@
                 <div id="right-foot" style="display: none;" class="rightfoot"></div>
                 <div id="left-foot" style="display: none;" class="leftfoot"></div>
             </div>
+            <div id="victoryImage"></div>
+            </div>
         </div>
-        <div class="col-12" id="gameWrapper">
+        <div id="gameWrapper">
             <div class="content font-primary">
                 <p id="displayWord"></p>
                 <input placeholder="Guess letter here" type="text" class="typing-input" id="letter-input"
                     maxlength="1" />
-                <div class="details display-7">
+                <div class="details">
                     <p class="hint">Hint: <span id="hint"></span></p>
                     <p class="guess-left">Remaining guesses: <span id="remaining-guesses"></span></p>
                     <p class="wrong-letter">Wrong letters: <span id="wrong-letters"></span></p>

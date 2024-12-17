@@ -82,14 +82,13 @@ span.text-special {
 }
 
 .hangmanWrap {
-  margin-top: 12px;
+  margin-top: 8.5px;
 }
 
 .message {
   background: transparent;
   margin-top: 15px;
   font-family: "montserrat", sans-serif;
-
 }
 
 #messageOutput,
@@ -124,7 +123,7 @@ input[type=text] {
   border-left: none;
   border-right: none;
   border-bottom: 2px solid var(--primary-color);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border-top: none;
 }
 
@@ -167,6 +166,10 @@ h3 {
   font-weight: 600;
 }
 
+.details {
+  font-size: 14px;
+}
+
 .remaining-guesses,
 .wrong-letters,
 .content {
@@ -190,7 +193,7 @@ p#hint {
   color: var(--secondary-color);
   font-style: italic;
   text-transform: lowercase;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 #displayWord {
@@ -213,7 +216,7 @@ button.btn,
 button#reset-btn {
   background-color: var(--secondary-color);
   border-radius: 20px;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: lowercase;
   font-family: "montserrat", sans-serif;
@@ -282,8 +285,12 @@ pre {
   top: 21px;
   left: 123px;
   z-index: 1;
-  animation: rock 1s alternate infinite ease-in-out;
+  /* animation: rock 1s alternate infinite ease-in-out; */
   transform-origin: center bottom;
+}
+
+.rock {
+  animation: rock 1s alternate infinite ease-in-out;
 }
 
 @keyframes rock {
@@ -340,9 +347,27 @@ pre {
   position: absolute;
   top: 86px;
   left: 80px;
-  animation: wave 1s alternate infinite ease-in-out;
+  /* animation: wave 1s alternate infinite ease-in-out; */
   transform-origin: 100%;
 }
+
+.rightarm {
+  width: 60px;
+  height: 4px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  display: block;
+  position: absolute;
+  top: 86px;
+  left: 141px;
+  /* animation: wave2 1s alternate infinite ease-in-out; */
+  transform-origin: 0%;
+}
+
+.wave {
+  animation: wave 0.5s ease infinite;
+}
+
 
 @keyframes wave {
   0% {
@@ -358,21 +383,8 @@ pre {
   }
 }
 
-.wave {
-  animation: wave 0.5s ease infinite;
-}
-
-.rightarm {
-  width: 60px;
-  height: 4px;
-  border: 1px solid var(--primary-color);
-  background-color: var(--primary-color);
-  display: block;
-  position: absolute;
-  top: 86px;
-  left: 141px;
-  animation: wave2 1s alternate infinite ease-in-out;
-  transform-origin: 0%;
+.wave-2 {
+  animation: wave-2 0.5s ease infinite;
 }
 
 @keyframes wave-2 {
@@ -388,11 +400,6 @@ pre {
     transform: rotate(0deg);
   }
 }
-
-.wave-2 {
-  animation: wave-2 0.5s ease infinite;
-}
-
 
 .leftfoot {
   width: 20px;
@@ -443,6 +450,25 @@ pre {
 .shake {
   animation: shake 10.5s ease-in-out;
 }
+
+.victory-animation {
+  max-width: 225px; 
+  height: 400px;
+  background-image: url(https://estelle.github.io/10/files/sprite.png);
+  background-size: cover;
+  animation: gangham 4s steps(23,start) infinite,
+    movearound 12s steps(69,end) infinite alternate 44ms;
+  animation-direction: normal, alternate;
+}
+@keyframes gangham {
+  0% {background-position: 0 0}
+  100% {background-position: -5175px 0}
+}
+@keyframes movearound {
+  0% {transform: translatex(0)}
+  100% {transform: translatex(600px);}
+}
+  
 
 /* ----- Game Over */
 #liveReload {
