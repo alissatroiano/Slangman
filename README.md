@@ -1,4 +1,4 @@
-![Slangman Logo](https://i.im.ge/2024/12/15/zPdSOy.logo.png)
+git![Slangman Logo](https://i.im.ge/2024/12/15/zPdSOy.logo.png)
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
@@ -84,7 +84,7 @@ The following tools were used to test Slangman:
 ![W3C Validator](assets/testing_html1.png)
 
 - [JS Hint](https://jshint.com/)
-- !(JS Hint Test)(assets/jshint.png)
+- ![JS Hint Test](assets/jshint.png)
 
 ## Credits
 - Logo Image Created with [Canva](https://www.canva.com/)
