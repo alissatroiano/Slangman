@@ -42,36 +42,6 @@ class App {
         // Start the game
         this.loadWords().then(() => this.startNewGame());
 
-        // window.addEventListener('message', (ev) => {
-        //     const { type, data } = ev.data;
-
-        //     // Reserved type for messages sent via `context.ui.webView.postMessage`
-        //     if (type === 'devvit-message') {
-        //         const { message } = data;
-
-        //         // Always output full message
-        //         output.replaceChildren(JSON.stringify(message, undefined, 2));
-
-        //         // Handle different message types
-        //         switch (message.type) {
-        //             case 'initialData':
-        //                 const { username } = message.data;
-        //                 usernameLabel.innerText = username;
-        //                 break;
-
-        //             case 'gameOver':
-        //                 message.innerText = `Error: ${message.data.message}`;
-        //                 break;
-
-        //             case 'gameWin':
-        //                 message.innerText = `Success: ${message.data.message}`;
-        //                 break;
-
-        //             default:
-        //                 console.error(`Unknown message type: ${message.type}`);
-        //         }
-        //     }
-        // });
     }
 
     // Method to load words from JSON
@@ -138,7 +108,6 @@ class App {
         document.getElementById('hangmanStand').style.display = "flex";
         document.getElementById('hangmanBody').style.display = "flex";
         document.getElementById('hangmanWrapper').style.height = '220px';
-        // document.getElementById('victoryImage').style.display = "none";
         document.getElementById("hangman-wrapper").classList.remove("shake");
     }
 
@@ -175,10 +144,31 @@ class App {
             // Ensure partsToShow does not exceed total parts
             partsToShow = Math.min(partsToShow, totalParts);
 
+
             // Display hangman parts
             for (let i = 0; i < partsToShow; i++) {
+                // Special case: handle feet based on word length
+                if (this.selectedWord.length >= 8) {
+                    // For words with 8+ letters, feet grow one at a time
+                    if (this.wrongLetters.length >= 11) {
+                        document.getElementById("left-foot").style.display = "flex";
+                    }
+                    if (this.wrongLetters.length >= 12) {
+                        document.getElementById("right-foot").style.display = "flex";
+                    }
+                } else {
+                    // For words with <= 7 letters, feet grow together
+                    if (this.wrongLetters.length >= 7) {
+                        document.getElementById("left-foot").style.display = "flex";
+                        document.getElementById("right-foot").style.display = "flex";
+                    }
+                }
+
+                // Default behavior for earlier parts
                 this.hangmanParts[i].style.display = "flex";
             }
+
+
 
             // Animate elements if guesses exceed 8
             if (this.wrongLetters.length > 8) {
@@ -189,7 +179,7 @@ class App {
             }
             if (this.wrongLetters.length > 10) {
                 document.getElementById("head").classList.add("rock");
-            } 
+            }
             if (this.wrongLetters.length > 11) {
                 document.getElementById("right-foot").classList.add("wave");
             }
@@ -197,7 +187,7 @@ class App {
                 document.getElementById("left-foot").classList.add("wave-2");
             }
             if (this.wrongLetters.length > 13) {
-                document.getElementById("hangman-wrapper").classList.add("shake"); 
+                document.getElementById("hangman-wrapper").classList.add("shake");
             }
         }
         // Update the display before checking for win/loss
@@ -227,10 +217,6 @@ class App {
         if (this.getDisplayWord() === this.selectedWord) {
             // Ensure the full word is displayed before ending the game
             this.updateDisplay();
-            // document.getElementById('hangmanStand').style.display = "none";
-            // document.getElementById('hangmanBody').style.display = "none";
-            // document.getElementById('hangmanWrapper').style.height = '400px';
-            // document.getElementById('victoryImage').classList.add('victory-animation');
             gameWrapper.innerHTML = `
                 <h3 class="game-win-text">🎉 Congratulations! You guessed the word: <strong>${this.selectedWord}</strong></h3>
                 <button class="btn" id="liveReload">Play again?</button>`;
@@ -239,9 +225,6 @@ class App {
             liveReload.addEventListener("click", () => {
                 this.initializeGameUI();
                 this.resetGame();
-                // document.getElementById('victoryImage').style.display('none');
-                // document.getElementById('victoryImage').classList.remove('victory-animation');
-
             });
             return;
         }

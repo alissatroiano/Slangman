@@ -68,14 +68,19 @@ The following tools and technologies were used to create Slangman:
 
 - [GitHub](https://github.com)
 
+- [Devvit](https://developers.reddit.com/docs/)
+
+- [Typescript](https://www.typescriptlang.org/)
+
+## Testing 
+
+The following tools were used to test Slangman:
+
 - [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/)
 
 - [W3C HTML Validator](https://validator.w3.org/)
 
 - [JS Hint](https://jshint.com/)
-
-## Testing 
-
 
 ## Credits
 - Logo Image Created with [Canva](https://www.canva.com/)
