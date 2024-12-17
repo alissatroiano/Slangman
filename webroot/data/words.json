@@ -93,7 +93,7 @@
     },
     {
         "word": "Snatched",
-        "hint": "If someone is looking snatched, they look really good, particularly their outfit"
+        "hint": "If someone is looking this way, they look really good, particularly their outfit"
     },
     {
         "word": "CancelCulture",
@@ -112,7 +112,11 @@
         "hint": "similar to emo or goth culture, but they use the internet to express themselves."
     },
     {
-        "word": "BigYikes",
+        "word": "High-key",
+        "hint": "the opposite of being low-key."
+    },
+    {
+        "word": "Big Yikes",
         "hint": "Used to describe something embarrassing."
     },
     {
@@ -257,7 +261,7 @@
     },
     {
         "word": "OnGod",
-        "hint": "Short for \"I swear to god.\" Means that a person's statement is frank."
+        "hint": "Means that a person's statement is frank."
     },
     {
         "word": "Ratio",
@@ -277,7 +281,7 @@
     },
     {
         "word": "Sus",
-        "hint": "Short for suspect/suspicious."
+        "hint": "Something you find distrustful"
     },
     {
         "word": "Slay",
@@ -297,19 +301,19 @@
     },
     {
         "word": "Wig",
-        "hint": "To do something so well as to \"make one's wig fly off.\""
+        "hint": "To do something so well as to \"make one's _ fly off.\""
     },
     {
         "word": "Word",
-        "hint": "Slang for \"okay.\""
+        "hint": "Slang for \"okay.\". Generally used to acknowledge or agree with"
     },
     {
         "word": "Af",
         "hint": "As fuck"
     },
     {
-        "word": "BigBrain",
-        "hint": "When you have done something silly making you feel like your own brain shrinks as you regret all of your life"
+        "word": "Big Brain",
+        "hint": "Very intelligent; genius"
     },
     {
         "word": "Chad",
@@ -389,7 +393,7 @@
     },
     {
         "word": "TBH",
-        "hint": "Acronym used when making a comment or a joke (best to stick to texts with this one too)."
+        "hint": "Acronym used when giving your opinion."
     },
     {
         "word": "Thirsty",
