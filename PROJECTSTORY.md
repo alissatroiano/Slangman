@@ -85,6 +85,8 @@ The game's current dataset (or dictionary) of words was compiled using the follo
 
 ## Challenges I ran into
 
+#### Fonts
+
 ## Accomplishments that I'm proud of
 
 ## What I learned
