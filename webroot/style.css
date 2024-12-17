@@ -5,7 +5,7 @@
   --secondary-color: #917ff6;
   --link-color: #8594e4;
   --placeholder: #c7cdf5c8;
-  --accent-color: rgb(255, 15, 247);
+  --accent-color: rgb(255 152 252);
   --light-color: #d5def5;
   --dark: #2d0d83;
   --darker: #1b0754;
@@ -167,7 +167,7 @@ h3 {
 }
 
 .details {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .remaining-guesses,
@@ -185,7 +185,6 @@ span#hint,
 span#wrong-letters {
   font-family: "montserrat", sans-serif;
   color: var(--accent-color);
-  font-weight: 600;
 }
 
 p#hint {
@@ -214,12 +213,12 @@ p#progressMsg {
 
 button.btn,
 button#reset-btn {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border-radius: 20px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 15px;
   text-transform: lowercase;
   font-family: "montserrat", sans-serif;
+  margin: 10px auto;
 }
 
 /* New button container */
