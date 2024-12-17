@@ -4,7 +4,7 @@ class App {
         const usernameLabel = document.querySelector('#username');
         const gameWrapper = document.querySelector('#slangmanWrapper');
         // const message = document.querySelector('#gameMsg');
-        const victoryImage = document.getElementById('victoryImage');
+
         // Game state variables
         this.words = []; // Initially empty, will be populated from JSON
         this.selectedWord = "";
@@ -135,7 +135,6 @@ class App {
             part.style.display = "none"; // Hide all parts
             part.classList.remove("wave", "wave-2", "rock", "shake"); // Remove all animation classes
         });
-        this.victoryImage.style.display = "none";
         document.getElementById('hangmanStand').style.display = "flex";
         document.getElementById('hangmanBody').style.display = "flex";
         document.getElementById('hangmanWrapper').style.height = '220px';
@@ -231,6 +230,7 @@ class App {
             document.getElementById('hangmanStand').style.display = "none";
             document.getElementById('hangmanBody').style.display = "none";
             document.getElementById('hangmanWrapper').style.height = '400px';
+            document.getElementById('victoryImage').style.display="flex";
             document.getElementById('victoryImage').classList.add('victory-animation');
             gameWrapper.innerHTML = `
                 <h3 class="game-win-text">🎉 Congratulations! You guessed the word: <strong>${this.selectedWord}</strong></h3>
