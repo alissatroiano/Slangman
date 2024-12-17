@@ -14,9 +14,7 @@ Using Devvit's Menu actions, Slangman does the following:
 
 Once the post has been generated, users may perform the following actions:
 - Read directions on the initial screen, by clicking 'Directions'.
-![Directions]()
 - Trigger the game webview, by clicking 'Play'
-![Play Buttton]()
 
 Once the game webview is triggered, users can do the following with Slangman:
 - Use the hint as a guide
