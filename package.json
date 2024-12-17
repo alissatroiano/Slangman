@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "slangman",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "dependencies": {
+    "@devvit/public-api": "0.11.4"
+  },
+  "scripts": {
+    "clean": "node webroot/data/cleanWords.js",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "typescript": "5.3.2"
+  }
+}

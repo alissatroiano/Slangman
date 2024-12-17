@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <title>Slangman</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="gamePage">
+    <section id="slangmanWrapper">
+        <!-- Flex Container -->
+        <div class="slangman-container">
+            <!-- Hangman Area -->
+            <div id="hangmanWrapper" class="hangmanWrap" style="position: relative; width: 140px; height: 220px;">
+                <!-- Stand -->
+                <div class="stand" id="hangmanStand">
+                    <div style="width: 120px; height: 10px; background: rgb(158, 95, 236); position: absolute; top: 0;"></div>
+                    <div style="width: 7.5px; height: 200px; background: rgb(158, 95, 236); position: absolute; top: 0; left: 45px;"></div>
+                    <div style="width: 90px; height: 10px; background: rgb(158, 95, 236); position: absolute; top: 0; right: 0;"></div>
+                    <div style="width: 5px; height: 20px; background: rgb(158, 95, 236); position: absolute; top: 10px; right: 0;"></div>
+                </div>
+                <div class="hangman-body" id="hangmanBody">
+                    <!-- Hangman parts -->
+                    <div id="head" style="display: none;" class="head"></div>
+                    <div id="body" style="display: none;" class="torso"></div>
+                    <div id="right-arm" style="display: none;" class="rightarm"></div>
+                    <div id="left-arm" style="display: none;" class="leftarm"></div>
+                    <div id="right-leg" style="display: none;" class="rightleg"></div>
+                    <div id="left-leg" style="display: none;" class="leftleg"></div>
+                    <div id="right-foot" style="display: none;" class="rightfoot"></div>
+                    <div id="left-foot" style="display: none;" class="leftfoot"></div>
+                </div>
+                <div class="victory" id="victoryImage"></div>
+            </div>
+            <!-- Game Area -->
+            <div id="gameWrapper">
+                <div class="btn-wrap">
+                    <button id="reset-btn" class="top-right-btn">New Word</button>
+                    </div>
+                <div class="content font-primary">
+                    <p id="displayWord"></p>
+                    <input placeholder="Guess letter here" type="text" class="typing-input" id="letter-input" maxlength="1" />
+                    <div class="details">
+                        <p class="hint">Hint: <span id="hint"></span></p>
+                        <div class="tools-row">
+                        <p class="guess-left">Remaining guesses: <span id="remaining-guesses"></span></p>
+                        <p class="wrong-letter">Wrong letters: <span id="wrong-letters"></span></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script type="application/javascript" src="main.js"></script>
+
+</body>
+</html>
