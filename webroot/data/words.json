@@ -161,7 +161,7 @@
   },
   {
     "word": "Sis",
-    "hint": "A shortened version of \"THIS WORDter\", this term is typically used to greet a friend, no matter their gender."
+    "hint": "A shortened version of \"THIS WORD-ter\", this term is typically used to greet a friend, no matter their gender."
   },
   {
     "word": "Gaup",
@@ -244,7 +244,7 @@
     "hint": "Short for mediocre"
   },
   {
-    "word": "notYou",
+    "word": "NotYou",
     "hint": "Used to condemn or poke fun at someone or something."
   },
   {
@@ -288,7 +288,7 @@
     "hint": "Understandable"
   },
   {
-    "word": "Vibe Check",
+    "word": "VibeCheck",
     "hint": "To check one's personality or attitude"
   },
   {
@@ -369,7 +369,7 @@
   },
   {
     "word": "Boomer",
-    "hint": "Short for ‘baby THIS WORD’, referring to older folks born 1946 to 1964 – but mostly used to clap back at pretty much anyone who’s older and not so in-the-know."
+    "hint": "Refers to older folks born 1946 to 1964 – but mostly used to clap back at pretty much anyone who’s older and not so in-the-know."
   },
   {
     "word": "SleepOn",
@@ -476,14 +476,6 @@
     "hint": "Acronym for likemindedness"
   },
   {
-    "word": "IMO",
-    "hint": "Acronym used to conveye one's outlook"
-  },
-  {
-    "word": "IMOH",
-    "hint": "Acronym used to modestly conveye one's outlook"
-  },
-  {
     "word": "JK",
     "hint": "Acronym for jestings"
   },
@@ -552,6 +544,10 @@
     "hint": "A slang term used to make fun of behaviors perceived to be stereotypically white or to call out what’s seen to be a particularly bold instance of white privilege or racism."
   },
   {
+    "word": "IMO",
+    "hint": "Acronym used to conveye one's outlook"
+  },
+  {
     "word": "algospeak",
     "hint": "Refers to coded language and euphemisms used on social media platforms to avoid having content removed or filtered by an alg"
   },
@@ -562,6 +558,10 @@
   {
     "word": "boreout",
     "hint": "A state of dissatisfaction and demotivation that a person experiences due to being bored and unchallenged at work."
+  },
+  {
+    "word": "IMHO",
+    "hint": "Acronym used to modestly conveye one's outlook"
   },
   {
     "word": "kittenfishing",

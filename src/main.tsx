@@ -25,12 +25,6 @@ Devvit.addCustomPostType({
       return currUser?.username ?? 'anon';
     });
 
-    // Load latest counter from redis with `useAsync` hook
-    // const [counter, setCounter] = useState(async () => {
-    //   const redisCount = await context.redis.get(`counter_${context.postId}`);
-    //   return Number(redisCount ?? 0);
-    // });
-
     // Create a reactive state for web view visibility
     const [webviewVisible, setWebviewVisible] = useState(false);
 
@@ -72,6 +66,15 @@ Devvit.addCustomPostType({
             height="250px"
             width="250px"
           />
+           <vstack alignment="start middle">
+            <hstack>
+              <text size="medium">Username:</text>
+              <text size="medium" weight="bold">
+                {' '}
+                {username ?? ''}
+              </text>
+            </hstack>
+          </vstack>
           <spacer />
           <button icon="play-outline" onPress={onShowWebviewClick}>PLAY  
           </button>

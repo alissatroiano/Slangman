@@ -1,7 +1,9 @@
 {
   "extends": "@devvit/public-api/devvit.tsconfig.json",
   "compilerOptions": {
-    "noEmit": true
+    "lib": ["ES2017", "DOM"],
+    "noEmit": true,
+    "types": ["vitest/globals"]
   },
   "include": ["./src/**/*", "test.js", "./assets/**/*"]
 }

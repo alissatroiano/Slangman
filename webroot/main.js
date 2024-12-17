@@ -59,6 +59,9 @@ class App {
 
     initializeGameUI() {
         gameWrapper.innerHTML = `
+         <div class="btn-wrap">
+                            <button id="reset-btn" class="top-right-btn">New Word</button>
+                         </div>
         <div class="content font-primary">
                     <p id="displayWord"></p>
                     <input placeholder="Guess letter here" type="text" class="typing-input" id="letter-input" maxlength="1" />
@@ -67,8 +70,6 @@ class App {
                         <p class="guess-left">Remaining guesses: <span id="remaining-guesses"></span></p>
                         <p class="wrong-letter">Wrong letters: <span id="wrong-letters"></span></p>
                     </div>
-                    <button id="reset-btn">New Word</button>
-           
         `;
 
         // Re-bind DOM elements to the game
