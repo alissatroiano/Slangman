@@ -138,7 +138,7 @@ class App {
         document.getElementById('hangmanStand').style.display = "flex";
         document.getElementById('hangmanBody').style.display = "flex";
         document.getElementById('hangmanWrapper').style.height = '220px';
-        document.getElementById('victoryImage').style.display = "none";
+        // document.getElementById('victoryImage').style.display = "none";
         document.getElementById("hangman-wrapper").classList.remove("shake");
     }
 
@@ -227,11 +227,10 @@ class App {
         if (this.getDisplayWord() === this.selectedWord) {
             // Ensure the full word is displayed before ending the game
             this.updateDisplay();
-            document.getElementById('hangmanStand').style.display = "none";
-            document.getElementById('hangmanBody').style.display = "none";
-            document.getElementById('hangmanWrapper').style.height = '400px';
-            document.getElementById('victoryImage').style.display="flex";
-            document.getElementById('victoryImage').classList.add('victory-animation');
+            // document.getElementById('hangmanStand').style.display = "none";
+            // document.getElementById('hangmanBody').style.display = "none";
+            // document.getElementById('hangmanWrapper').style.height = '400px';
+            // document.getElementById('victoryImage').classList.add('victory-animation');
             gameWrapper.innerHTML = `
                 <h3 class="game-win-text">🎉 Congratulations! You guessed the word: <strong>${this.selectedWord}</strong></h3>
                 <button class="btn" id="liveReload">Play again?</button>`;
@@ -240,6 +239,9 @@ class App {
             liveReload.addEventListener("click", () => {
                 this.initializeGameUI();
                 this.resetGame();
+                // document.getElementById('victoryImage').style.display('none');
+                // document.getElementById('victoryImage').classList.remove('victory-animation');
+
             });
             return;
         }

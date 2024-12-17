@@ -24,7 +24,7 @@ const main = async () => {
     // Write the updated data back to a file
     await fs.writeFile('webroot/data/words.json', JSON.stringify(updatedData, null, 2));
 
-    console.log("Hints updated and saved to 'updated_words.json'.");
+    console.log("Hints updated and saved to 'words.json'.");
 };
 
 main().catch(err => console.error("Error:", err));
