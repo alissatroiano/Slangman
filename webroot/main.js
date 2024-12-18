@@ -46,15 +46,35 @@ class App {
     // Method to load words from JSON
     async loadWords() {
         try {
-            const response = await fetch("data/words.csv"); 
-                (response => response.text())
-            if (!response.ok) throw new Error(`Failed to fetch words: ${response.status}`);
-            this.words = await response.json(); // Parse JSON and assign to this.words
+            const response = await fetch("data/words.csv");
+            if (!response.ok) {
+                throw new Error(`Failed to fetch words: ${response.status}`);
+            }
+
+            const csvText = await response.text(); // Get the raw CSV text
+            this.words = this.parseCSV(csvText); // Convert CSV to JSON
             console.log("Words loaded successfully:", this.words);
         } catch (error) {
             console.error("Error loading words:", error);
             alert("Failed to load word list. Please try again later.");
         }
+    }
+
+    // Helper function to parse CSV into JSON
+    parseCSV(csvText) {
+        const rows = csvText.split("\n"); // Split rows by newline
+        const headers = rows[0].split(","); // Get headers from the first row
+
+        // Map each row to an object based on headers
+        const jsonData = rows.slice(1).map(row => {
+            const values = row.split(","); // Split values by comma
+            return headers.reduce((acc, header, i) => {
+                acc[header.trim()] = values[i]?.trim(); // Map header to corresponding value
+                return acc;
+            }, {});
+        });
+
+        return jsonData;
     }
 
     initializeGameUI() {
