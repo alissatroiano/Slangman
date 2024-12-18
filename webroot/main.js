@@ -80,8 +80,7 @@ class App {
     initializeGameUI() {
         gameWrapper.innerHTML = `
          <div class="btn-wrap">
-                            <button id="reset-btn" class="top-right-btn">
-                           </button>
+                            <button id="reset-btn" class="top-right-btn">New Word</button>
                          </div>
         <div class="content font-primary">
                     <p id="displayWord"></p>
