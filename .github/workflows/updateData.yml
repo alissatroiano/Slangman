@@ -15,15 +15,15 @@ jobs:
       - name: Fetch data
         uses: githubocto/flat@v2
         with:
-          http_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRyMoNLEpeyQneLe-eOIc2VHasStpnasX6tM0iOppoRQCZLJgZw0TCNnzhf7hLprCul5-gsqa75WJH8/pub?output=csv
-          downloaded_filename: webroot/data/data.csv 
+          http_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRyMoNLEpeyQneLe-eOIc2VHasStpnasX6tM0iOppoRQCZLJgZw0TCNnzhf7hLprCul5-gsqa75WJH8/pubhtml?gid=197522710&single=true
+          downloaded_filename: webroot/data/words.csv 
 
       - name: Commit changes
         run: |
           git config --local user.name "Alissa Troiano"
           git config --local user.email "alissatroianonyc@gmail.com"
-          git add assets/data/data.csv 
-          git commit -m "Update data.csv from Google Sheets"
+          git add webroot/data/words.csv 
+          git commit -m "Update webroot.csv from Google Sheets"
           git push origin main
 
       - name: Deploy to GitHub Pages

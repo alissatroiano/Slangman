@@ -120,14 +120,17 @@ p#displayWord {
   margin-left: 20px;
 }
 
-.top-right-btn {
+button.top-right-btn {
   position: absolute;
   right: 0;
-  top: -190px;
-  background-color: rgb(158, 95, 236); /* Match the theme */
+  top: -240px;
+  background-color: none; /* Match the theme */
+  background: url('../assets/new-word.png') no-repeat center center;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
   color: #fff;
   border: none;
-  padding: 8px 12px;
   cursor: pointer;
   border-radius: 5px;
   font-size: 0.9rem;
@@ -244,12 +247,9 @@ p#progressMsg {
 
 button.btn,
 button#reset-btn {
-  background-color: var(--primary-color);
   border-radius: 20px;
   font-size: 15px;
   text-transform: lowercase;
-  font-family: "montserrat", sans-serif;
-  margin: 10px auto;
 }
 
 /* New button container */
