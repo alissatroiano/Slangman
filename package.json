@@ -11,6 +11,7 @@
     "clean": "node webroot/data/cleanWords.js",
     "test": "vitest",
     "test:ui": "vitest --ui",
+    "dev": "cd webroot && http-server -a localhost",
     "lint": "eslint ."
   },
   "devDependencies": {

@@ -54,10 +54,7 @@ I chose this template because it made it easy for me to use familiar technolgoie
 
 The following tools were used to build Slangman:
 
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - was used to build out the game's functionality, including:
-  - Fetching word & hint data from `webroot/data/words.json`
-  - Randomly selecting a Hangman word
-  - 
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - was used to build out the game's core functionality.
   
 - [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5) - markup was used to build a layout for the game to render. 
 
@@ -85,10 +82,29 @@ The game's current dataset (or dictionary) of words was compiled using the follo
 
 ## Challenges I ran into
 
+Some challenges I ran into while building Slangman:
+
 #### Fonts
 
+- I am used to using a CDN import or React import via npm installations for rendering fonts. I am also quite new to Typescript, and I had some trouble finding clear documentation about adding fonts.
+  
 ## Accomplishments that I'm proud of
+
+- [X] Rendering Slangman parts & animations based on the selectd word's length
 
 ## What I learned
 
 ## What's next for Slangman
+
+#### Country Dropdown
+
+- The country dropdown will allow users to select versions of the game in other languages (example: Singlish Slang).
+- JavaScript will be used to change the  dataset based on the language the user selects.
+
+#### Mod Dictionary Tools
+
+- Mod Tools will be updated using Typescript and the Devvit API to allow moderators to edit the word dictionary form Reddit's UI.
+
+#### Dark/Light Mode Toggle
+
+- The Dark/Light Mode Toggle will allow users to select color themes based on their own accessibility preferences (dark mode, light mode, high contrast).
