@@ -68,11 +68,11 @@ Devvit.addCustomPostType({
           />
            <vstack alignment="start middle">
             <hstack>
-              <text size="medium">Username:</text>
+              <text size="medium">Hey, </text>
               <text size="medium" weight="bold">
                 {' '}
                 {username ?? ''}
-              </text>
+      Ready to play? </text>
             </hstack>
           </vstack>
           <spacer />

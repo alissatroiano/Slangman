@@ -14,7 +14,6 @@ class App {
         this.wrongLetters = [];
         this.displayWord = "";
 
-
         // DOM elements
         this.letterInput = document.getElementById("letter-input");
         this.displayWordElement = document.getElementById("displayWord");
@@ -47,7 +46,8 @@ class App {
     // Method to load words from JSON
     async loadWords() {
         try {
-            const response = await fetch("data/words.json"); // Fetch JSON file
+            const response = await fetch("data/words.csv"); 
+                (response => response.text())
             if (!response.ok) throw new Error(`Failed to fetch words: ${response.status}`);
             this.words = await response.json(); // Parse JSON and assign to this.words
             console.log("Words loaded successfully:", this.words);
