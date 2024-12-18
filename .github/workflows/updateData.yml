@@ -1,0 +1,34 @@
+name: Update Data
+
+on:
+  repository_dispatch:
+    types: [Run flat.yaml from Google Sheets]
+  workflow_dispatch: {}
+  
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+
+      - name: Fetch data
+        uses: githubocto/flat@v2
+        with:
+          http_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRyMoNLEpeyQneLe-eOIc2VHasStpnasX6tM0iOppoRQCZLJgZw0TCNnzhf7hLprCul5-gsqa75WJH8/pubhtml?gid=197522710&single=true
+          downloaded_filename: webroot/data/words.csv 
+
+      - name: Commit changes
+        run: |
+          git config --local user.name "Alissa Troiano"
+          git config --local user.email "alissatroianonyc@gmail.com"
+          git add webroot/data/words.csv 
+          git commit -m "Update webroot.csv from Google Sheets"
+          git push origin main
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./

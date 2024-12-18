@@ -68,6 +68,7 @@ Devvit.addCustomPostType({
           />
            <vstack alignment="start middle">
            <hstack>
+            <hstack>
               <text size="medium">Hey, </text>
               <text size="medium" weight="bold">
                 {' '}

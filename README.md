@@ -44,7 +44,7 @@ To run Slangman locally:
    3. `npm install`
    4. `npm run dev ` 
    5. Visit [localhost::8080](http://localhost:8080/)
-
+s
 ### Reddit Production
 
 To setup Slangman on Reddit:
