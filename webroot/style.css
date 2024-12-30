@@ -5,7 +5,7 @@
   --secondary-color: #917ff6;
   --link-color: #8594e4;
   --placeholder: #c7cdf5c8;
-  --accent-color: rgb(255, 15, 247);
+  --accent-color: rgb(255 152 252);
   --light-color: #d5def5;
   --dark: #2d0d83;
   --darker: #1b0754;
@@ -23,7 +23,6 @@
   src: url('../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
-/* 
 body {
   display: flex;
   flex-direction: column;
@@ -38,7 +37,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-} */
+}
 
 .font-primary {
   font-family: "montserrat", sans-serif;
@@ -112,9 +111,26 @@ strong {
 }
 
 p#displayWord {
-  font-size: 1.85rem;
+  font-size: 1.45rem;
   font-family: "montserrat", sans-serif;
   letter-spacing: 5px;
+}
+
+.btn-wrap {
+  margin-left: 20px;
+}
+
+.top-right-btn {
+  position: absolute;
+  right: 0;
+  top: -190px;
+  background-color: rgb(158, 95, 236); /* Match the theme */
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
 }
 
 input[type=text] {
@@ -167,7 +183,7 @@ h3 {
 }
 
 .details {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .remaining-guesses,
@@ -180,12 +196,26 @@ h3 {
   letter-spacing: .235px;
 }
 
+.tools-row {
+  display: flex;
+}
+
 span#hint,
 #remaining-guesses,
 span#wrong-letters {
   font-family: "montserrat", sans-serif;
   color: var(--accent-color);
-  font-weight: 600;
+}
+
+#remaining-guesses {
+  margin-right: 10px;
+  text-align: left;
+}
+
+span#wrong-letters {
+  text-align: right;
+  margin-left: 10px;
+  /* text-wrap: wrap; */
 }
 
 p#hint {
@@ -214,12 +244,12 @@ p#progressMsg {
 
 button.btn,
 button#reset-btn {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border-radius: 20px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 15px;
   text-transform: lowercase;
   font-family: "montserrat", sans-serif;
+  margin: 10px auto;
 }
 
 /* New button container */
@@ -451,15 +481,36 @@ pre {
   animation: shake 10.5s ease-in-out;
 }
 
-.victory-animation {
-  max-width: 225px; 
-  height: 400px;
-  background-image: url('../assets/sprite.png');
-  background-size: cover;
-  animation: gangham 4s steps(23,start) infinite,
-    movearound 12s steps(69,end) infinite alternate 44ms;
-  animation-direction: normal, alternate;
+#victoryImage svg  {
+  max-width: 250px; 
+  height: 250px;
+  animation: wave-2 0.5s ease-in-out infinite;
 }
+
+.victory-animation {
+  max-width: 240px; 
+  height: auto;
+  animation: wave-2 0.5s ease-in-out infinite;
+}
+
+.wave-2 {
+  animation: wave-2 0.5s ease infinite;
+}
+
+@keyframes wave-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 @keyframes gangham {
   0% {background-position: 0 0}
   100% {background-position: -5175px 0}
@@ -468,6 +519,7 @@ pre {
   0% {transform: translatex(0)}
   100% {transform: translatex(600px);}
 }
+  
   
 
 /* ----- Game Over */
@@ -485,4 +537,21 @@ h3.game-win-text {
   margin: 20px auto;
   font-family: sans-serif;
   text-transform: uppercase;
+}
+
+#gameWrapper {
+  position: relative;
+  max-width: 400px; 
+  width: 310px; 
+  height: auto;
+}
+
+
+@media only screen and (min-width: 768px) {
+#gameWrapper {
+  position: relative;
+  max-width: 400px; 
+  width: 380px; 
+  height: auto;
+  }
 }

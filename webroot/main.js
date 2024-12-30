@@ -14,7 +14,6 @@ class App {
         this.wrongLetters = [];
         this.displayWord = "";
 
-
         // DOM elements
         this.letterInput = document.getElementById("letter-input");
         this.displayWordElement = document.getElementById("displayWord");
@@ -42,36 +41,6 @@ class App {
         // Start the game
         this.loadWords().then(() => this.startNewGame());
 
-        // window.addEventListener('message', (ev) => {
-        //     const { type, data } = ev.data;
-
-        //     // Reserved type for messages sent via `context.ui.webView.postMessage`
-        //     if (type === 'devvit-message') {
-        //         const { message } = data;
-
-        //         // Always output full message
-        //         output.replaceChildren(JSON.stringify(message, undefined, 2));
-
-        //         // Handle different message types
-        //         switch (message.type) {
-        //             case 'initialData':
-        //                 const { username } = message.data;
-        //                 usernameLabel.innerText = username;
-        //                 break;
-
-        //             case 'gameOver':
-        //                 message.innerText = `Error: ${message.data.message}`;
-        //                 break;
-
-        //             case 'gameWin':
-        //                 message.innerText = `Success: ${message.data.message}`;
-        //                 break;
-
-        //             default:
-        //                 console.error(`Unknown message type: ${message.type}`);
-        //         }
-        //     }
-        // });
     }
 
     // Method to load words from JSON
@@ -89,16 +58,19 @@ class App {
 
     initializeGameUI() {
         gameWrapper.innerHTML = `
+         <div class="btn-wrap">
+                            <button id="reset-btn" class="top-right-btn">New Word</button>
+                         </div>
         <div class="content font-primary">
                     <p id="displayWord"></p>
                     <input placeholder="Guess letter here" type="text" class="typing-input" id="letter-input" maxlength="1" />
                     <div class="details display-7">
                         <p class="hint">Hint: <span id="hint"></span></p>
+                        <div class="tools-row">
                         <p class="guess-left">Remaining guesses: <span id="remaining-guesses"></span></p>
                         <p class="wrong-letter">Wrong letters: <span id="wrong-letters"></span></p>
+                        </div>
                     </div>
-                    <button id="reset-btn">New Word</button>
-           
         `;
 
         // Re-bind DOM elements to the game
@@ -138,7 +110,7 @@ class App {
         document.getElementById('hangmanStand').style.display = "flex";
         document.getElementById('hangmanBody').style.display = "flex";
         document.getElementById('hangmanWrapper').style.height = '220px';
-        // document.getElementById('victoryImage').style.display = "none";
+        document.getElementById('victoryImage').style.display = "none";
         document.getElementById("hangman-wrapper").classList.remove("shake");
     }
 
@@ -225,27 +197,28 @@ class App {
         }
 
         if (this.getDisplayWord() === this.selectedWord) {
-            // Ensure the full word is displayed before ending the game
-            this.updateDisplay();
-            // document.getElementById('hangmanStand').style.display = "none";
-            // document.getElementById('hangmanBody').style.display = "none";
-            // document.getElementById('hangmanWrapper').style.height = '400px';
-            // document.getElementById('victoryImage').classList.add('victory-animation');
+            // Hide the hangman elements
+            document.getElementById('hangmanStand').style.display = "none";
+            document.getElementById('hangmanBody').style.display = "none";
+            document.getElementById('hangmanWrapper').style.height = '220px';
+            
+            // Show the victory image
+            document.getElementById('victoryImage').style.display = "flex";
+            
+            // Display win message
             gameWrapper.innerHTML = `
-                <h3 class="game-win-text">🎉 Congratulations! You guessed the word: <strong>${this.selectedWord}</strong></h3>
-                <button class="btn" id="liveReload">Play again?</button>`;
-
+                <h3 class="game-win-text">🎉 Congratulations! You won! The word was: <strong>${this.selectedWord}</strong></h3>
+                <button class="btn" id="liveReload">Play again?</button>
+            `;
+        
             let liveReload = document.querySelector("#liveReload");
             liveReload.addEventListener("click", () => {
                 this.initializeGameUI();
                 this.resetGame();
-                // document.getElementById('victoryImage').style.display('none');
-                // document.getElementById('victoryImage').classList.remove('victory-animation');
-
-            });
-            return;
+            })
         }
     }
+        
 
     // Method to generate the display word with underscores
     getDisplayWord() {
