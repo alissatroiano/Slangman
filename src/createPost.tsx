@@ -7,7 +7,7 @@ Devvit.configure({
 
 // Adds a new menu item to the subreddit allowing to create a new post
 Devvit.addMenuItem({
-  label: 'Create Slangman Post',
+  label: 'Test Slangman',
   location: 'subreddit',
   onPress: async (_event, context) => {
     const { reddit, ui } = context;

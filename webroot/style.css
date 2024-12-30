@@ -305,15 +305,15 @@ pre {
 /* Hangman Icon */
 
 .head {
-  margin-top: 5px;
+  margin-top: 28px;
   width: 40px;
-  height: 45px;
+  height: 40px;
   border: 5px solid var(--primary-color);
   border-radius: 50%;
   display: block;
   position: absolute;
   top: 21px;
-  left: 123px;
+  left: 125px;
   z-index: 1;
   /* animation: rock 1s alternate infinite ease-in-out; */
   transform-origin: center bottom;
@@ -342,10 +342,13 @@ pre {
   position: absolute;
   top: 80px;
   left: 140px;
+  margin-top: 15px;
+
 }
 
 .leftleg {
-  height: 60px;
+  margin-top: 10px;
+  height: 45px;
   border: 2px solid var(--primary-color);
   background-color: var(--primary-color);
   display: block;
@@ -357,7 +360,8 @@ pre {
 }
 
 .rightleg {
-  height: 60px;
+  margin-top: 10px;
+  height: 45px;
   border: 2px solid var(--primary-color);
   background-color: var(--primary-color);
   display: block;
@@ -369,26 +373,28 @@ pre {
 }
 
 .leftarm {
-  width: 60px;
+  margin-top: 15px;
+  width: 43px;
   height: 4px;
   border: 1px solid var(--primary-color);
   background-color: var(--primary-color);
   display: block;
   position: absolute;
-  top: 86px;
-  left: 80px;
+  top: 90px;
+  left: 100px;
   /* animation: wave 1s alternate infinite ease-in-out; */
   transform-origin: 100%;
 }
 
 .rightarm {
-  width: 60px;
+  margin-top: 15px;
+  width: 43px;
   height: 4px;
   border: 1px solid var(--primary-color);
   background-color: var(--primary-color);
   display: block;
   position: absolute;
-  top: 86px;
+  top: 90px;
   left: 141px;
   /* animation: wave2 1s alternate infinite ease-in-out; */
   transform-origin: 0%;
@@ -432,26 +438,26 @@ pre {
 }
 
 .leftfoot {
-  width: 20px;
+  width: 15px;
   height: 4px;
-  border: 2px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
   background-color: var(--primary-color);
   display: block;
   position: absolute;
-  top: 200px;
-  left: 107px;
+  top: 195px;
+  left: 117px;
   transform: rotate(8deg);
 }
 
 .rightfoot {
-  width: 20px;
+  width: 15px;
   height: 4px;
-  border: 2px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
   background-color: var(--primary-color);
   display: block;
   position: absolute;
-  top: 200px;
-  left: 154px;
+  top: 195px;
+  left: 150px;
   transform: rotate(-8deg);
 }
 
